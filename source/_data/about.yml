@@ -1,0 +1,102 @@
+- class_name: 關於我
+  subtitle: 喵喵喵喵
+  avatarImg: https://itousouta15.tw/avatar/avatar.webp
+  avatarSkills:
+    left:
+      - SCAICT 中電會
+      - 小小高中生
+      - 甚麼都不會
+      - 資安只會Web
+    right:
+      - 會一點美術
+      - 斜槓大師
+      - 動漫宅宅
+      - 程式菜鳥
+  name: 伊藤蒼太
+  description: 是一名 前端工程師、學生、獨立開發者
+  aboutsiteTips:
+    tips: 追求
+    title1: 源於
+    title2: 熱愛而去 感受
+    word:
+      - 學習
+      - 生活
+      - 程式
+      - 體驗
+  helloAbout: (ゝ∀･)⌒☆
+  skillsTips:
+    tips: 技能
+    title: 開啟創造力
+  careers:
+    tips: 生涯
+    title: 無限進步
+    list:
+      - desc: 臺中市立大雅國中
+        color: "#f0f4ff"
+      - desc: 臺中市立大里高中
+        color: "#5a98ff"
+    img: https://bu.dusays.com/2023/04/21/644287166329b.png
+  statistic:
+    link: /archives
+    text: 文章隧道
+    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
+  map:
+    title: 我現在住在
+    StrengthenTitle: 台灣，台中市
+    background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
+    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+  selfInfo:
+    selfInfoTips1: 生於
+    selfInfoContentYear: 2009
+    selfInfoTips2: 臺中市立大里高中
+    selfInfoContent2: 在學中👨‍🎓
+    selfInfoTips3: 現在職業
+    selfInfoContent3: 高二學生👨‍🎓
+  personalities:
+    author_name: 調停者
+    personality_type: INFP
+    photo_url: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    personality_img: https://www.16personalities.com/static/images/personality-types/avatars/infp-mediator-female.svg?v=3
+    name_url: https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC
+  maxim:
+    maxim_tips: 座右銘
+    maxim_top: 喵喵喵喵，
+    maxim_bottom: 喵喵喵喵。
+  buff:
+    buff_tips: 特長
+    buff_top: Bug 創造大師
+    buff_bottom: 動漫宅宅
+  game:
+    game_tips: 愛好遊戲
+    game_title: Summer Pocket
+    game_uid: "UID: 125766904"
+    game_bg: https://www.1999.co.jp/campaign/summerpockets2025/image/test_fastview3.png
+  comic:
+    comic_tips: 愛好動漫
+    comic_title: 追番
+    comic_list:
+      - name: 约定的梦幻岛
+        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
+      - name: 咒术回战
+        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
+      - name: 紫罗兰永恒花园
+        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
+      - name: 鬼灭之刃
+        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
+      - name: JOJO的奇妙冒险 黄金之风
+        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
+  like:
+    like_tips: 關注偏好
+    like_title: 数码科技
+    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
+    like_bottom: 手机、电脑软硬件
+  music:
+    music_tips: 音樂偏好
+    music_title: 
+    music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
+    music_link: /music
