@@ -1,50 +1,50 @@
-- class_name: 技能
+- class_name: 程式技能
   creativity_list:
-    - name: Java
-      color: "#fff"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/26ba17ce013ecde9afc8b373e2fc0b9d_1804318147854602575.jpg
-    - name: Docker
-      color: "#57b6e6"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/544b2d982fd5c4ede6630b29d86f3cae_7350393908531420887.png
-    - name: Photoshop
-      color: "#4082c3"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/4ce1d081b9b37b06e3714bee95e58589_1613929877388832041.png
-    - name: Node
-      color: "#333"
-      icon: https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/svg/node-logo.svg
-    - name: Webpack
-      color: "#2e3a41"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/32dc115fbfd1340f919f0234725c6fb4_4060605986539473613.png
-    - name: Pinia
-      color: "#fff"
-      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/pinia-logo.svg
+    - name: C++
+      color: "#00599C"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg
+    - name: C#
+      color: "#834bad"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg
     - name: Python
-      color: "#fff"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/02c9c621414cc2ca41035d809a4154be_7912546659792951301.png
-    - name: Vite
-      color: "#937df7"
-      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/vite-logo.svg
-    - name: Flutter
-      color: "#4499e4"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/b5aa93e0b61d8c9784cf76d14886ea46_4590392178423108088.png
-    - name: Vue
-      color: "#b8f0ae"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/cf23526f451784ff137f161b8fe18d5a_692393069314581413.png
-    - name: React
-      color: "#222"
-      icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K
-    - name: CSS3
-      color: "#2c51db"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/08/02/125766904/948767d87de7c5733b5f59b036d28b4b_3573026798828830876.png
-    - name: JS
-      color: "#f7cb4f"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/06216e7fddb6704b57cb89be309443f9_7269407781142156006.png
+      color: "#3776AB"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg
     - name: HTML
-      color: "#e9572b"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/08/02/125766904/f774c401c8bc2707e1df1323bdc9e423_1926035231499717029.png
+      color: "#E34F26"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg
+    - name: CSS
+      color: "#1572B6"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg
+    - name: JavaScript
+      color: "#F7DF1E"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg
+    - name: Node.js
+      color: "#339933"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg
+    - name: Hexo
+      color: "#0E83CD"
+      icon: https://hexo.io/icon/favicon-96x96.png
     - name: Git
-      color: "#df5b40"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/07/29/125766904/fcc0dbbfe206b4436097a8362d64b558_6981541002497327189.webp
-    - name: Apifox
-      color: "#e65164"
-      icon: https://upload-bbs.miyoushe.com/upload/2025/08/02/125766904/b61bc7287d7f7f89bd30079c7f04360e_2465770520170903938.png
+      color: "#F05032"
+      icon: https://git-scm.com/images/logos/downloads/Git-Icon-White.svg
+    - name: GitHub
+      color: "#181717"
+      icon: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
+    - name: Linux
+      color: "#FCC624"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
+    - name: Markdown
+      color: "#FFFFFF"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg
+    - name: VS Code
+      color: "#007ACC"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg
+    - name: Docker
+      color: "#2496ED"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg
+    - name: Unity
+      color: "#FFFFFF"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg
+    - name: Godot
+      color: "#478CBF"
+      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg

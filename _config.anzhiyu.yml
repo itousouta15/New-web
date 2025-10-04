@@ -8,10 +8,6 @@ menu:
     夥伴們: /link/ || anzhiyu-icon-link
     留言板: /comments/ || anzhiyu-icon-envelope
 
-  我的:
-    音樂館: /music/ || anzhiyu-icon-music
-    追番頁: /bangumis/ || anzhiyu-icon-bilibili
-
   關於:
     本人: /about/ || anzhiyu-icon-paper-plane
     碎碎念: /essay/ || anzhiyu-icon-lightbulb
@@ -26,7 +22,7 @@ nav:
     - title: 網頁
       item:
         - name: BLOG(舊站)
-          link: https://itousouta15.tw/
+          link: https://itousouta15.tw/ㄊ
           icon: /img/favicon.png
     - title: 項目
       item:
@@ -811,7 +807,7 @@ aside:
 
   card_announcement:
     enable: true
-    content: 歡迎來到我的技術筆記小窩！這裡記錄著我的學習心得與程式開發經驗 🎉
+    content: 歡迎來到我的秘密基地！這裡記錄著我的學習心得與程式開發紀錄 🎉
   card_weixin: 
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -1128,7 +1124,7 @@ comment_barrage_config:
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
 nav_music:
-  enable: true
+  enable: false
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 8152976493
   server: netease

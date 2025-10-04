@@ -6,7 +6,6 @@ tags:
   - Zerojudge
 categories:
   - 程式開發
-  - C++
 ---
 一個放ZJ題解的地方
 <!-- more -->

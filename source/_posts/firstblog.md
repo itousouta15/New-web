@@ -7,7 +7,6 @@ sticky: false
 cover: /img/mainweb.webp
 categories:
   - 比賽心得
-  - Hexo
 ---
 
 # C++到前端的跨界初體驗

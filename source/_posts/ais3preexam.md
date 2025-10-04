@@ -1,12 +1,9 @@
 ---
 title: AIS3 pre-exam 2025
 date: 2025-07-11 13:32:32
-tags:
-  - AIS3
 cover: /img/ais3/ais3.webp
 categories:
   - 技術分享
-  - AIS3
 ---
 # 前言
 

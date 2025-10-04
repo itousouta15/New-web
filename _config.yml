@@ -5,7 +5,7 @@
 # Site
 title: 伊藤蒼太
 subtitle: 'Professional Bug Creator'
-description: '欢迎来到我的个人博客！在这里，我分享我的编程旅程、学习心得以及生活点滴。无论你是技术爱好者还是生活探索者，都能在这里找到共鸣。让我们一起成长，一起发现生活的美好！'
+description: '專注於競賽程式設計與網頁開發的學生，展示各類專案、程式範例與技術文章，熱衷於社群交流與技術成長。'
 keywords: '伊藤蒼太, Hexo, Blog, Coding, Learning, Life'
 author: 伊藤蒼太
 language: zh-TW
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://localhost:4000
+url: https://itousouta.tw
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -134,10 +134,10 @@ envelope_comment:
     top_img: false
     type: envelope
 
-# 追番插件
+# 追番插件（已停用，改用自定義頁面）
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置
-  enable: true
+  enable: false
   source: bili
   path:
   vmid: 372204786
