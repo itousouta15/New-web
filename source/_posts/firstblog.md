@@ -1,12 +1,13 @@
 ---
 title: 第一次架網站的心得
 date: 2025-04-04 18:29:32
-tags: 
-  - Hexo
 sticky: false
 cover: /img/mainweb.webp
 categories:
   - 比賽心得
+tags:
+  - Hexo
+  - 前端開發
 ---
 
 # C++到前端的跨界初體驗
