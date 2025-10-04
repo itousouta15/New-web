@@ -3,6 +3,8 @@
 ########################################
 theme_version_check: true
 theme_config_check: true
+
+
 # 主選單導航
 # 更多圖標資訊，請訪問 https://github.com/D-Sketon/hexo-theme-reimu/issues/30
 menu:
@@ -57,10 +59,18 @@ rss: atom.xml
 injector:
   head_begin: # 在 <head> 後注入代碼片段
   head_end: # 在 </head> 前注入代碼片段
-  body_begin: # 在 <body> 後注入代碼片段
+  body_begin: |
+    <div style="background: linear-gradient(135deg, #ff6b6b, #ffa500); color: white; padding: 12px; text-align: center; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.15); position: fixed; top: 0; left: 0; right: 0; z-index: 300; border-radius: 0;">
+      ⚠️ 這是舊版部落格存檔，新的部落格已遷移至：
+      <a href="https://itousouta15.tw" target="_blank" style="color: #fff; text-decoration: underline; margin-left: 10px; font-weight: bold;">前往新站點 →</a>
+    </div>
+    <style>
+      #header-nav { top: 48px !important; }
+      #wrap { padding-top: 48px; }
+    </style>
   body_end: |
     <script>
-      console.log('Footer loaded');
+      console.log('Legacy blog loaded');
     </script>
   sidebar_begin: # 在 <aside> 後注入代碼片段
   sidebar_end: # 在 </aside> 前注入代碼片段
@@ -203,7 +213,7 @@ clarity: false
 ########################################
 
 waline:
-  enable: true # 修正拼寫錯誤
+  enable: false # 存檔版本停用評論
   serverURL: https://web-eight-weld-65.vercel.app
   lang: zh-TW
   locale: {} # https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
@@ -259,8 +269,15 @@ algolia_search:
     hits_empty: "未發現與 「${query}」相關內容"
     hits_stats: "找到${hits}條結果（用時 ${time} ms）"
 
+# 本地搜尋 (推薦用於存檔版本)
+local_search:
+  enable: true
+  labels:
+    input_placeholder: "搜尋存檔內容..."
+    hits_empty: "未找到相關內容"
+
 generator_search:
-  enable: false
+  enable: true
   field: post
   content: true
 
@@ -353,7 +370,7 @@ outdate:
   daysAgo: 180 # 文章被認為過期的天數
   message: 本文最后更新于 {time}，请注意文中内容可能已经发生变化。
 
-# 贊助
+# 贊助 (存檔版本停用)
 sponsor:
   enable: false
   tip: 请作者喝杯咖啡吧！

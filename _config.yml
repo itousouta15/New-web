@@ -3,15 +3,15 @@
 ## 原始碼： https://github.com/hexojs/hexo/
 
 # 網站
-title: 伊藤蒼太's Blog
-subtitle: 'Coding, Learning, Life'
-description: 'Professional Bug Creator'
-keywords: '伊藤蒼太, Hexo, Blog, Coding, Learning, Life'
+title: 伊藤蒼太's Blog (舊版存檔)
+subtitle: 'Legacy Blog Archive'
+description: '伊藤蒼太的舊版部落格存檔，已遷移至新站點'
+keywords: '伊藤蒼太, Hexo, Blog, Archive, Legacy'
 author: 伊藤蒼太
 language: zh-TW
 timezone: 'Asia/Taipei'
 
-url: https://itousouta15.tw
+url: https://itousouta15.tw/legacy-blog/
 permalink: :year/:month/:day/:urlname/
 permalink_defaults:
 pretty_urls:
@@ -92,6 +92,30 @@ theme: reimu
 deploy:
   type: ''
 
+# Algolia 搜尋設定 (已停用 - 此為舊版存檔)
+# algolia:
+#   appId: 'your_application_id'
+#   apiKey: 'your_search_only_api_key'
+#   adminApiKey: 'your_admin_api_key'
+#   indexName: 'your_index_name'
+#   chunkSize: 5000
+#   fields:
+#     - content:strip:truncate,0,500
+#     - excerpt:strip
+#     - gallery
+#     - permalink
+#     - photos
+#     - slug
+#     - tags
+#     - title
+
+# 本地搜尋設定 (適用於存檔版本)
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
+
 # Clean CSS 配置
 ## 使用 hexo-clean-css 壓縮 CSS 文件
 clean_css:
@@ -101,7 +125,7 @@ clean_css:
 # All Minifier 配置
 ## 使用 hexo-all-minifier 全面優化 HTML、CSS、JS 和圖片
 all_minifier:
-  enable: true
+  enable: false
   # HTML 壓縮選項
   html:
     enable: true
