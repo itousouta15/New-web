@@ -16,6 +16,7 @@
     "hexo-asset-image": "^1.0.0",
     "hexo-bilibili-bangumi": "^2.0.1",
     "hexo-butterfly-envelope": "^1.0.15",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",

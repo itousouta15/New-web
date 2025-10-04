@@ -116,6 +116,24 @@ if site.data.about
             [data-theme='dark'] .author-content-item.map {
               background-image: url(#{mapBackgroundDark});
             }
+            
+            /* 手機版字體大小調整 */
+            @media (max-width: 768px) {
+              .hello-about .content h1 {
+                font-size: 1.8rem !important;
+                line-height: 1.2;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+            }
+            
+            @media (max-width: 480px) {
+              .hello-about .content h1 {
+                font-size: 1.5rem !important;
+                line-height: 1.1;
+              }
+            }
           .author-content-item.map.single
             - let mapTitle = item.map.title
             - let mapStrengthenTitle = item.map.StrengthenTitle
@@ -209,7 +227,7 @@ if site.data.about
             .content-bottom
               .tips=`跟 ${aboutName} 一起欣賞更多音樂吧~`
             .banner-button-group
-              a.banner-button(onclick=`pjax.loadUrl("${music_link}")`)
+              a.banner-button(href=`${music_link}` target="_blank" rel="noopener noreferrer")
                 i.anzhiyufont.anzhiyu-icon-arrow-circle-right
                 |  
                 span.banner-button-text 更多推薦

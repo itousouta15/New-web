@@ -48,7 +48,7 @@
     selfInfoTips1: 生於
     selfInfoContentYear: 2009
     selfInfoTips2: 臺中市立大里高中
-    selfInfoContent2: 在學中👨‍🎓
+    selfInfoContent2: 在學中
     selfInfoTips3: 現在職業
     selfInfoContent3: 高二學生👨‍🎓
   personalities:
@@ -97,3 +97,4 @@
     music_tips: 音樂偏好
     music_title: 猛独が襲う
     music_bg: https://i.ytimg.com/vi/3Mgfv-kYc10/maxresdefault.jpg
+    music_link: "https://youtube.com/playlist?list=PLzFQvb1JKCAdjN2hNzWkt50tCBQbF3lHr&si=tBrRwz506Fr5pH5b"
