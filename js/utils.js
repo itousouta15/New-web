@@ -613,7 +613,7 @@ const anzhiyu = {
       } else if (hour > 14 && hour <= 18) {
         message = "集中精力，攻克难关";
       } else if (hour > 18 && hour <= 24) {
-        message = "不要太劳累了，早睡更健康";
+        message = "不要太勞累了，早睡更健康";
       }
 
       return message;

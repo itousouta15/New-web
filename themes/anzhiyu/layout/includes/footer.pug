@@ -13,7 +13,7 @@
               use(xlink:href=`#`+ item.icon)
           else if (item.icon.startsWith("anzhiyu"))
             i.anzhiyufont(class=`${item.icon}`)
-      img.footer_mini_logo(title="返回顶部", alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)", src=centerImg, size="50px")
+      img.footer_mini_logo(title="返回頂部", alt="返回頂部" onclick="anzhiyu.scrollToDest(0, 500)", src=centerImg, size="50px")
       each item, index in rightInfo
         a.deal_link(href=url_for(item.link) title=item.title)
           if (item.icon.startsWith("fa"))
@@ -53,7 +53,7 @@
       if theme.footer.list.randomFriends > 0
         .footer-group
           .footer-title-group
-            .footer-title 友链
+            .footer-title 友鏈
             a.random-friends-btn#footer-random-friends-btn(href="javascript:addFriendLinksInFooter();" title="换一批友情链接")
               i.anzhiyufont.anzhiyu-icon-arrow-rotate-right
           .footer-links#friend-links-in-footer

@@ -16,9 +16,9 @@ if theme.post_copyright.enable && page.copyright !== false
       .post-copyright__author_desc=config.subtitle
     .post-copyright__post__info
       if (page.copyright_author && page.copyright_author !== config.author)
-        a.post-copyright__reprint(title="该文章为转载文章，注意版权协议" href=url_for(url)) 转载
+        a.post-copyright__reprint(title="該文章為轉載文章，注意版權協議" href=url_for(url)) 轉載
       else
-        a.post-copyright__original(title="该文章为原创文章，注意版权协议" href=url_for(url)) 原创
+        a.post-copyright__original(title="該文章為原創文章，注意版權協議" href=url_for(url)) 原創
       a.post-copyright-title
         span(onclick=`rm.copyPageUrl('${theme.post_copyright.decode ? decodeURI(url) : url}')`)=pageTitle
     //- ptool

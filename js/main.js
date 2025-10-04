@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isInViewPortOfOneNoDis(pageBottomDomFlag || percentage > 90) && currentTop > 20) {
         $navTotop.classList.add("long");
-        $percentBtn.textContent = "返回顶部";
+        $percentBtn.textContent = "返回頂部";
       } else {
         $navTotop.classList.remove("long");
         $percentBtn.textContent = percentage;
