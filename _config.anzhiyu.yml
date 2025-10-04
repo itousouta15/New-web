@@ -60,7 +60,7 @@ copy:
 #   name: link || icon
 social:
   Github: https://github.com/itousouta15 || anzhiyu-icon-github
-  BiliBili: https://space.bilibili.com/372204786 || anzhiyu-icon-bilibili
+  BiliBili: https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0 || anzhiyu-icon-bilibili
 
 # 作者卡片 状态
 author_status:
@@ -470,7 +470,7 @@ footer:
         link: https://github.com/itousouta15
         icon: anzhiyu-icon-github
       - title: Bilibili
-        link: https://space.bilibili.com/372204786
+        link: https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0
         icon: anzhiyu-icon-bilibili
       # - title: 抖音
       #   link: https://v.douyin.com/DwCpMEy/

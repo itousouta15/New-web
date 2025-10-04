@@ -5,7 +5,7 @@
   buttonLink: /about/
   limit: 30
   home_essay: true
-  top_background: https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg
+  top_background: /img/banner.webp
   essay_list:
     - content: 🎉 部落格正式上線了！使用 Hexo + AnZhiYu 主題，準備開始記錄我的程式學習之路。
       date: 2025/10/04
@@ -23,4 +23,6 @@
     - content: 🎯 Bug 又出現了，不過這次我很快就找到問題所在，成長了不少！
       date: 2025/10/04
     - content: 🌱 每天學一點，每天進步一點，這就是程式開發者的日常。
+      date: 2025/10/04
+    - content: 還在開發中，敬請期待更多內容！
       date: 2025/10/04
