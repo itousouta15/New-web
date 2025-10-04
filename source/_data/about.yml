@@ -32,19 +32,18 @@
     title: 無限進步
     list:
       - desc: 臺中市立大雅國中
-        color: "#f0f4ff"
+        color: "#83c5d4"
       - desc: 臺中市立大里高中
         color: "#5a98ff"
-    img: https://bu.dusays.com/2023/04/21/644287166329b.png
+    img: /img/EDU.png
   statistic:
     link: /archives
     text: 文章隧道
-    cover: https://bu.dusays.com/2023/05/01/644f4b037b930.jpg
   map:
     title: 我現在住在
     StrengthenTitle: 台灣，台中市
-    background: https://bu.dusays.com/2023/07/05/64a4c61cb20ef.jpg
-    backgroundDark: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    background: /img/taiwan.webp
+    backgroundDark: /img/taiwan.webp
   selfInfo:
     selfInfoTips1: 生於
     selfInfoContentYear: 2009
@@ -55,7 +54,7 @@
   personalities:
     author_name: 調停者
     personality_type: INFP
-    photo_url: https://bu.dusays.com/2023/07/05/64a4c63495ac5.jpg
+    photo_url: /img/banner.webp
     personality_img: https://www.16personalities.com/static/images/personality-types/avatars/infp-mediator-female.svg?v=3
     name_url: https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC
   maxim:
@@ -69,34 +68,33 @@
   game:
     game_tips: 愛好遊戲
     game_title: Summer Pocket
-    game_uid: "UID: 125766904"
     game_bg: https://www.1999.co.jp/campaign/summerpockets2025/image/test_fastview3.png
   comic:
     comic_tips: 愛好動漫
     comic_title: 追番
     comic_list:
-      - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/27/647166c44b414.webp
-      - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
+      - name: BanG Dream! It's MyGO!!!!!
+        href: https://acg.gamer.com.tw/acgDetail.php?s=131634
+        cover: https://upload.wikimedia.org/wikipedia/zh/thumb/b/ba/BanG_Dream%21_It%27s_MyGO%21%21%21%21%21_poster.jpeg/375px-BanG_Dream%21_It%27s_MyGO%21%21%21%21%21_poster.jpeg
+      - name: 敗北女角太多了！
+        href: https://acg.gamer.com.tw/acgDetail.php?s=136968
+        cover: https://p2.bahamut.com.tw/B/ACG/c/68/0000136968.JPG
+      - name: ガールズバンドクライ
+        href: https://acg.gamer.com.tw/acgDetail.php?s=131960
+        cover: https://p2.bahamut.com.tw/B/ACG/c/60/0000131960.JPG
+      - name: 孤獨搖滾！
+        href: https://acg.gamer.com.tw/acgDetail.php?s=115950
+        cover: https://p2.bahamut.com.tw/B/ACG/c/50/0000115950.JPG
+      - name: 持續狩獵史萊姆三百年，不知不覺就練到 LV MAX
+        href: https://acg.gamer.com.tw/acgDetail.php?s=108268
+        cover: https://p2.bahamut.com.tw/B/ACG/c/68/0000108268.JPG
   like:
     like_tips: 關注偏好
-    like_title: 数码科技
-    like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
-    like_bottom: 手机、电脑软硬件
+    like_title: 資訊科技
+    like_bg: https://www.iamthecode.org/wp-content/uploads/2021/03/florian-olivo-4hbJ-eymZ1o-unsplash-scaled-e1616631053918.jpg
+    like_bottom: 程式,資訊安全
   music:
     music_tips: 音樂偏好
-    music_title: 
-    music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
+    music_title: 猛独が襲う
+    music_bg: https://i.ytimg.com/vi/3Mgfv-kYc10/maxresdefault.jpg
     music_link: /music

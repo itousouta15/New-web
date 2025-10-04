@@ -5,7 +5,9 @@ tags:
   - Hexo
 sticky: false
 cover: /img/mainweb.webp
-urlname: firstblog
+categories:
+  - 比賽心得
+  - Hexo
 ---
 
 # C++到前端的跨界初體驗

@@ -23,12 +23,12 @@ nav:
   travelling: true
   clock: true
   menu:
-    - title: 网页
+    - title: 網頁
       item:
-        - name: 博客
-          link: https://hexo.anheyu.com/
+        - name: BLOG(舊站)
+          link: https://itousouta15.tw/
           icon: /img/favicon.png
-    - title: 项目
+    - title: 項目
       item:
         - name: 安知鱼图床
           link: https://image.anheyu.com/
@@ -56,7 +56,7 @@ code_word_wrap: false
 copy:
   enable: true
   copyright:
-    enable: false
+    enable: true
     limit_count: 50
 
 # social settings (社交图标设置)
@@ -532,7 +532,7 @@ footer:
       # - link: https://beian.miit.gov.cn/
       #   text: 湘ICP备-xxxxxxx号
     subTitle:
-      enable: true
+      enable: false
       # Typewriter Effect (打字效果)
       effect: true
       # Effect Speed Options (打字效果速度参数)
@@ -789,7 +789,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
+  avatar: /img/avatar.webp
 
 # aside (侧边栏)
 # --------------------------------------
@@ -1060,8 +1060,8 @@ home_top:
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 學習筆記
-      path: /categories/學習筆記/
+    - name: 比賽心得
+      path: /categories/比賽心得/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
