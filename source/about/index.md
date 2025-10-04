@@ -31,6 +31,6 @@ type: "about"
 
 - 📧 Email: itousouta15@gmail.com
 - 🐙 GitHub: [itousouta15](https://github.com/itousouta15)
-- 📺 Bilibili: [伊藤蒼太](https://space.bilibili.com/372204786)
+- 📺 Bilibili: [伊藤蒼太](https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0)
 
 歡迎與我交流討論！😊

@@ -5,7 +5,7 @@
   buttonLink: /about/
   limit: 30
   home_essay: true
-  top_background: /img/banner.webp
+  top_background: /img/essay.webp
   essay_list:
     - content: 🎉 部落格正式上線了！使用 Hexo + AnZhiYu 主題，準備開始記錄我的程式學習之路。
       date: 2025/10/04
