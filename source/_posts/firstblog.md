@@ -1,5 +1,5 @@
 ---
-title: 第一次架網站的心得
+title: 第一次架網站的心得(舊站)
 date: 2025-04-04 18:29:32
 sticky: false
 cover: /img/mainweb.webp
@@ -9,6 +9,9 @@ tags:
   - Hexo
   - 前端開發
 ---
+
+> ## 此為舊站開發心得
+> 舊站網址: https://itousouta15.tw/legacy-blog/
 
 # C++到前端的跨界初體驗
 我開始寫程式和其他電神比已經算很晚了，約莫是高一上第一學期開始學C++，並決定用這條路走特選上大學，雖然目標是資安競程領域（~~主要是怕走前端會吃土~~）但我還是決定挑戰自己，嘗試學習網站開發（升學需要），不過，**這次的網站製作並不是從零開始，而是使用了Hexo框架並套用了現成的模板。**（~~技術不夠~~）雖然過程相對簡單，但仍然讓我對網站架構有了初步的了解（高二再來全部重寫）
@@ -94,18 +97,3 @@ tags:
 ![主頁](/img/FB/主頁.webp)
 主頁截圖(截自2025/8/21)
 
-# 特別感謝
-<div class="friend-item-wrap">
-  <a href="https://smallr-portfolio.vercel.app/en" rel="external nofollow noopener noreferrer" target="_blank"></a>
-    <div class="friend-icon-wrap">
-      <div class="friend-icon">
-        <img data-src="/img/smallR.webp" data-sizes="auto" alt="Small R" class="lazyautosizes lazyloaded" sizes="70px" src="/img/smallR.webp">
-      </div>
-    </div>
-    <div class="friend-info-wrap">
-      <div class="friend-name">Small R</div>
-      <div class="friend-desc">A Full-Stack Developer</div>
-    </div>
-  </div>
-
-**幫助我順利修復了Waline留言系統前後端的Bug**

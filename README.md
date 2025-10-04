@@ -1,12 +1,13 @@
 ﻿
 <div align="center">
 
+![網站圖片](https://raw.githubusercontent.com/itousouta15/itousouta15.github.io/main/source/img/Newweb.webp)
+
 # itousouta15.github.io
 
 ![伊藤蒼太](https://img.shields.io/badge/Author-伊藤蒼太-blue?style=for-the-badge)
 ![Hexo](https://img.shields.io/badge/Hexo-7.3.0-0e83cd?style=for-the-badge&logo=hexo)
 ![AnZhiYu Theme](https://img.shields.io/badge/Theme-AnZhiYu-ff69b4?style=for-the-badge)
-![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)
 ![Status](https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A//itousouta15.tw)
 
 **專注於競賽程式設計與網頁開發的學生，展示各類專案、程式範例與技術文章**
