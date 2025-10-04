@@ -457,6 +457,11 @@ const anzhiyu = {
   // 初始化即刻
   initIndexEssay: function () {
     if (!document.getElementById("bbTimeList")) return;
+    // 檢查 Swiper 是否可用
+    if (typeof Swiper === 'undefined') {
+      console.warn('Swiper 庫未載入，跳過 Essay 輪播初始化');
+      return;
+    }
     setTimeout(() => {
       let essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
         passiveListeners: true,
@@ -1152,15 +1157,27 @@ const anzhiyu = {
   // 创建二维码
   qrcodeCreate: function () {
     if (document.getElementById("qrcode")) {
-      document.getElementById("qrcode").innerHTML = "";
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: window.location.href,
-        width: 250,
-        height: 250,
-        colorDark: "#000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H,
-      });
+      try {
+        // 檢查 QRCode 是否可用
+        if (typeof QRCode === 'undefined') {
+          console.warn('QRCode 庫未載入，無法生成二維碼');
+          document.getElementById("qrcode").innerHTML = '<div style="text-align:center;padding:20px;color:#666;">QR 碼功能暫時無法使用</div>';
+          return;
+        }
+        
+        document.getElementById("qrcode").innerHTML = "";
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: window.location.href,
+          width: 250,
+          height: 250,
+          colorDark: "#000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+      } catch (error) {
+        console.warn('QR 碼生成失敗:', error);
+        document.getElementById("qrcode").innerHTML = '<div style="text-align:center;padding:20px;color:#666;">QR 碼生成失敗</div>';
+      }
     }
   },
 

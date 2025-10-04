@@ -100,6 +100,11 @@ if home_top_config.enable
       script(src=url_for(theme.home_top.swiper.swiper_js))
     script.
       function initBlogSlider() {
+        // 檢查 Swiper 是否可用
+        if (typeof Swiper === 'undefined') {
+          console.warn('Swiper 庫未載入，跳過 Blog Slider 初始化');
+          return;
+        }
         var swiper = new Swiper(".blog-slider", {
           passiveListeners: true,
           spaceBetween: 30,

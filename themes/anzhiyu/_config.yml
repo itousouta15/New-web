@@ -1071,7 +1071,7 @@ home_top:
       icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: false
+    enable: true
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
@@ -1323,8 +1323,8 @@ CDN:
     # artalk_css:
     # pace_js:
     # pace_default_css:
-    # countup_js:
-    # gsap_js:
+    countup_js: https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js
+    gsap_js: https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js
     # busuanzi:
     # rightmenu:
     # waterfall:

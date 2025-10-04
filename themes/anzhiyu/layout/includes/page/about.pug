@@ -126,6 +126,64 @@ if site.data.about
                 white-space: nowrap;
                 overflow: hidden;
               }
+              
+              /* 手機版區塊間距調整 */
+              .author-content-item-group.column.mapAndInfo {
+                margin-bottom: 1.2rem;
+              }
+              
+              /* 手機版隱藏地圖區塊 */
+              .author-content-item.map.single {
+                display: none !important;
+              }
+              
+              /* selfInfo 區塊調整 - 移除底部邊框，因為地圖已隱藏 */
+              .author-content-item.selfInfo.single {
+                margin-bottom: 0.8rem;
+                padding-bottom: 1rem;
+              }
+              
+              .author-content-item.selfInfo.single div {
+                margin-bottom: 0.5rem;
+                line-height: 1.5;
+              }
+              
+              .author-content-item.selfInfo.single div:last-child {
+                margin-bottom: 0;
+              }
+              
+              /* personalities 區塊間距和分隔 */
+              .author-content-item.personalities {
+                margin-top: 1.2rem;
+                padding-top: 1.2rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+              }
+              
+              [data-theme='light'] .author-content-item.personalities {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+              }
+            }
+            
+            @media (max-width: 480px) {
+              .hello-about .content h1 {
+                font-size: 3.5rem !important;
+                line-height: 1.1;
+              }
+              
+              /* 小屏幕額外調整 */
+              .author-content-item.map.single {
+                display: none !important;
+              }
+              
+              .author-content-item.personalities {
+                margin-top: 1rem;
+                padding-top: 1rem;
+              }
+              
+              .author-content-item.selfInfo.single {
+                margin-bottom: 0.8rem;
+                padding-bottom: 0.8rem;
+              }
             }
             
             @media (max-width: 480px) {
@@ -304,106 +362,140 @@ if site.data.about
                   | 人
 
 
-    script(src=url_for(theme.asset.countup_js))
+    if theme.asset.countup_js
+      script(src=url_for(theme.asset.countup_js))
     - const ck = theme.LA.ck
+    - const laEnable = theme.LA.enable
     script(defer).
       function initAboutPage() {
-        fetch("https://v6-widget.51.la/v6/#{ck}/quote.js")
-          .then(res => res.text())
-          .then(data => {
-            let title = ["最近活躍", "今日人數", "今日訪問", "昨日人數", "昨日訪問", "本月訪問", "總訪問量"];
-            let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+        // 只在 LA 統計功能啟用時執行
+        if (#{laEnable} && "#{ck}") {
+          fetch("https://v6-widget.51.la/v6/#{ck}/quote.js")
+            .then(res => {
+              if (!res.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return res.text();
+            })
+            .then(data => {
+              let title = ["最近活躍", "今日人數", "今日訪問", "昨日人數", "昨日訪問", "本月訪問", "總訪問量"];
+              let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
 
-            num = num.map(el => {
-              let val = el.replace(/(<\/span><span>)/g, "");
-              let str = val.replace(/(<\/span><\/p>)/g, "");
-              return str;
-            });
+              // 添加錯誤檢查
+              if (!num || num.length === 0) {
+                console.warn('51.la 統計數據格式異常');
+                return;
+              }
 
-            let statisticEl = document.getElementById("statistic");
-
-            // 自訂不顯示哪個或者顯示哪個，如下為不顯示 最近活躍訪客 和 總訪問量
-            let statistic = [];
-            for (let i = 0; i < num.length; i++) {
-              if (!statisticEl) return;
-              if (i == 0) continue;
-              statisticEl.innerHTML +=
-                "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
-              queueMicrotask(() => {
-                statistic.push(
-                  new CountUp(title[i], 0, num[i], 0, 2, {
-                    useEasing: true,
-                    useGrouping: true,
-                    separator: ",",
-                    decimal: ".",
-                    prefix: "",
-                    suffix: "",
-                  })
-                );
+              num = num.map(el => {
+                let val = el.replace(/(<\/span><span>)/g, "");
+                let str = val.replace(/(<\/span><\/p>)/g, "");
+                return str;
               });
-            }
 
-            let statisticElement = document.querySelector(".about-statistic.author-content-item");
-            function statisticUP() {
-              if (!statisticElement) return;
+              let statisticEl = document.getElementById("statistic");
 
-              const callback = (entries, observer) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    for (let i = 0; i < num.length; i++) {
-                      if (i == 0) continue;
-                      queueMicrotask(() => {
-                        statistic[i - 1].start();
-                      });
+              // 自訂不顯示哪個或者顯示哪個，如下為不顯示 最近活躍訪客 和 總訪問量
+              let statistic = [];
+              for (let i = 0; i < num.length; i++) {
+                if (!statisticEl) return;
+                if (i == 0) continue;
+                statisticEl.innerHTML +=
+                  "<div><span>" + title[i] + "</span><span id=" + title[i] + ">" + num[i] + "</span></div>";
+                queueMicrotask(() => {
+                  statistic.push(
+                    new CountUp(title[i], 0, num[i], 0, 2, {
+                      useEasing: true,
+                      useGrouping: true,
+                      separator: ",",
+                      decimal: ".",
+                      prefix: "",
+                      suffix: "",
+                    })
+                  );
+                });
+              }
+
+              let statisticElement = document.querySelector(".about-statistic.author-content-item");
+              function statisticUP() {
+                if (!statisticElement) return;
+
+                const callback = (entries, observer) => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                      for (let i = 0; i < num.length; i++) {
+                        if (i == 0) continue;
+                        queueMicrotask(() => {
+                          if (statistic[i - 1]) {
+                            statistic[i - 1].start();
+                          }
+                        });
+                      }
+                      observer.disconnect(); // 停止觀察元素，因為不再需要觸發此回調
                     }
-                    observer.disconnect(); // 停止觀察元素，因為不再需要觸發此回調
-                  }
-                });
-              };
+                  });
+                };
 
-              const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0
-              };
-              const observer = new IntersectionObserver(callback, options);
-              observer.observe(statisticElement);
-            }
+                const options = {
+                  root: null,
+                  rootMargin: "0px",
+                  threshold: 0
+                };
+                const observer = new IntersectionObserver(callback, options);
+                observer.observe(statisticElement);
+              }
 
-            const selfInfoContentYear = new CountUp("selfInfo-content-year", 0, #{selfInfoContentYear}, 0, 2, {
-              useEasing: true,
-              useGrouping: false,
-              separator: ",",
-              decimal: ".",
-              prefix: "",
-              suffix: "",
+              statisticUP();
+            })
+            .catch(error => {
+              console.warn('51.la 統計服務載入失敗:', error);
+              // 隱藏統計區塊如果無法載入
+              let statisticElement = document.querySelector(".about-statistic.author-content-item");
+              if (statisticElement) {
+                statisticElement.style.display = 'none';
+              }
             });
+        } else {
+          // 如果 LA 統計功能未啟用，隱藏統計區塊
+          let statisticElement = document.querySelector(".about-statistic.author-content-item");
+          if (statisticElement) {
+            statisticElement.style.display = 'none';
+          }
+        }
 
-            let selfInfoContentYearElement = document.querySelector(".author-content-item.selfInfo.single");
-            function selfInfoContentYearUp() {
-              if (!selfInfoContentYearElement) return;
+        // selfInfo 年份動畫 - 移到外面，避免依賴統計服務
+        const selfInfoContentYear = new CountUp("selfInfo-content-year", 0, #{selfInfoContentYear || 2009}, 0, 2, {
+          useEasing: true,
+          useGrouping: false,
+          separator: ",",
+          decimal: ".",
+          prefix: "",
+          suffix: "",
+        });
 
-              const callback = (entries, observer) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    selfInfoContentYear.start();
-                    observer.disconnect(); // 停止觀察元素，因為不再需要觸發此回調
-                  }
-                });
-              };
+        let selfInfoContentYearElement = document.querySelector(".author-content-item.selfInfo.single");
+        function selfInfoContentYearUp() {
+          if (!selfInfoContentYearElement) return;
 
-              const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0
-              };
-              const observer = new IntersectionObserver(callback, options);
-              observer.observe(selfInfoContentYearElement);
-            }
+          const callback = (entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                selfInfoContentYear.start();
+                observer.disconnect(); // 停止觀察元素，因為不再需要觸發此回調
+              }
+            });
+          };
 
-            selfInfoContentYearUp();
-            statisticUP()
-          });
+          const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0
+          };
+          const observer = new IntersectionObserver(callback, options);
+          observer.observe(selfInfoContentYearElement);
+        }
+
+        selfInfoContentYearUp();
 
         var pursuitInterval = null;
         pursuitInterval = setInterval(function () {
