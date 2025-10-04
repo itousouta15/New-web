@@ -22,8 +22,8 @@ nav:
     - title: 網頁
       item:
         - name: BLOG(舊站)
-          link: https://itousouta15.tw/ㄊ
-          icon: /img/favicon.png
+          link: https://itousouta15.github.io/legacy-blog/
+          icon: /img/banner.webp
     - title: 項目
       item:
         - name: 安知鱼图床

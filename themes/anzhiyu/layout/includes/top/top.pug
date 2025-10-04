@@ -50,7 +50,7 @@ if home_top_config.enable
                     - content.length > theme.index_post_content.length ? expert += ' ...' : ''
                     a.blog-slider__title(href=item.path, alt=item.title)= item.title
                     .blog-slider__text= item.description ? item.description : expert
-                    a.blog-slider__button(href=item.path, alt=item.title) 详情   
+                    a.blog-slider__button(href=item.path, alt=item.title) 詳情   
             //- 轮播图组件
             .blog-slider__pagination.swiper-pagination-clickable.swiper-pagination-bullets
 
@@ -79,7 +79,7 @@ if home_top_config.enable
             .recent-post-item(onclick=`pjax.loadUrl("${url_for(item.path)}")`)
               .post_cover.left_radius
                 a(href=item.path, title=item.title)
-                  span.recent-post-top-text 荐
+                  span.recent-post-top-text 推
                   img.post_bg(onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`, alt='cover',  src=item.cover)
               .recent-post-info
                 a.article-title(href=item.path, title=item.title)=item.title
@@ -91,7 +91,7 @@ if home_top_config.enable
             .banner-button-group
               .banner-button(onclick='event.stopPropagation();event.preventDefault();anzhiyu.hideTodayCard();')
                 i.anzhiyufont.anzhiyu-icon-arrow-circle-right
-                span.banner-button-text 更多推荐
+                span.banner-button-text 更多推薦
         
         link(rel="stylesheet", href=theme.home_top.banner.top_group_banner_css)
       
