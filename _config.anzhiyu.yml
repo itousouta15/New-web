@@ -72,14 +72,14 @@ author_status:
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
-    - 🤖️ 数码科技爱好者
-    - 🔍 分享与热心帮助
-    - 🏠 智能家居小能手
-    - 🔨 设计开发一条龙
-    - 🤝 专修交互与设计
-    - 🏃 脚踏实地行动派
-    - 🧱 团队小组发动机
-    - 💢 壮汉人狠话不多
+    - 💻 熱愛程式設計的開發者
+    - � 持續學習新技術
+    - � 專業 Bug 製造者
+    - 🌱 技術分享愛好者
+    - 🎮 動漫與科技的交集
+    - 🚀 追求程式的藝術
+    - � 解決問題的思考者
+    - ☕ 咖啡驅動的程式碼
 
 # search (搜索)
 # see https://blog.anheyu.com/posts/c27d.html#搜索系统
@@ -107,7 +107,7 @@ docsearch:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   preload: true
   CDN:
 
@@ -137,7 +137,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://itousouta15.tw/avatar/avatar.webp
+  img: /img/avatar.webp
   effect: false
 
 # Disable all banner image
@@ -231,7 +231,7 @@ post_copyright:
   enable: true
   decode: false
   author_href:
-  location: 长沙
+  location: 台灣
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
   avatarSinks: false # hover时头像下沉
@@ -428,11 +428,11 @@ footer:
   custom_text:
   runtime:
     enable: true
-    launch_time: 08/01/2025 00:00:00 # 网站上线时间
+    launch_time: 10/04/2025 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
-    work_description: 距离月入25k也就还差一个大佬带我~
+    work_description: 努力學習中，持續進步！
     offduty_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
-    offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
+    offduty_description: 放鬆時間到～享受生活的美好時光！
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
@@ -611,17 +611,17 @@ site_verification:
 
 theme_color:
    enable: true
-   main: "#425AEF"
-   dark_main: "#f2b94b"
-   paginator: "#425AEF"
+   main: "#506680"
+   dark_main: "#98bfeb"
+   paginator: "#506680"
    #   button_hover: "#FF7242"
-   text_selection: "#2128bd"
+   text_selection: "#506680"
    link_color: "var(--anzhiyu-fontcolor)"
    meta_color: "var(--anzhiyu-fontcolor)"
-   hr_color: "#4259ef23"
+   hr_color: "#50668023"
    code_foreground: "#fff"
    code_background: "var(--anzhiyu-code-stress)"
-   toc_color: "#425AEF"
+   toc_color: "#506680"
    #   blockquote_padding_color: "#425AEF"
    #   blockquote_background_color: "#425AEF"
    scrollbar_color: "var(--anzhiyu-scrollbar)"
@@ -689,7 +689,7 @@ canvas_fluttering_ribbon:
 # canvas_nest
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: true
+  enable: false
   color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
@@ -811,7 +811,7 @@ aside:
 
   card_announcement:
     enable: true
-    content: 欢迎来看我的博客鸭~
+    content: 歡迎來到我的技術筆記小窩！這裡記錄著我的學習心得與程式開發經驗 🎉
   card_weixin: 
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -822,7 +822,7 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: false
+    enable: true
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
@@ -833,7 +833,10 @@ aside:
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
       - Hexo
-      - 前端
+      - JavaScript
+      - Python
+      - 程式設計
+      - 學習心得
   card_archives:
     enable: true
     type: monthly # yearly or monthly
@@ -858,7 +861,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 4/1/2021 00:00:00
+  publish_date: 10/4/2025 00:00:00
 
 # Console - Newest Comments
 newest_comments:
@@ -1001,7 +1004,7 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#425AEF" # The background color of Toast Notification in light mode
+  bg_light: "#506680" # The background color of Toast Notification in light mode
   bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
@@ -1052,18 +1055,18 @@ home_top:
   subTitle: 方得始終。
   siteText: itousouta15.tw
   category:
-    - name: 前端
-      path: /categories/前端/
+    - name: 程式開發
+      path: /categories/程式開發/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 心得
-      path: /categories/心得/
+    - name: 學習筆記
+      path: /categories/學習筆記/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活/
+    - name: 技術分享
+      path: /categories/技術分享/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
@@ -1073,10 +1076,10 @@ home_top:
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
-    title: Theme-AnZhiYu
+    tips: 歡迎來訪
+    title: 伊藤蒼太的技術筆記
     image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
-    link: https://docs.anheyu.com/
+    link: /about/
 
 # 朋友圈配置
 friends_vue:
