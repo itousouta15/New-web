@@ -54,7 +54,7 @@ mourn:
 # Code Blocks (代码相关)
 # --------------------------------------
 
-highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: ocean #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -166,7 +166,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: both
+  position: right
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     # - /img/default_cover.jpg
@@ -321,7 +321,7 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: Valine # Twikoo/Waline
+  use: Waline # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -380,17 +380,68 @@ valine:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: # 你的 Waline 伺服器地址，可以使用 Vercel 部署
+  serverURL: https://web-eight-weld-65.vercel.app # 使用現有的 Waline 服務器
   bg: /img/comment_bg.png # Waline 背景圖片
   pageview: true # 是否顯示文章閱讀數
   meta_css: true # 是否引入 waline-meta.css，以便顯示 meta 圖標
   imageUploader: true # 是否啟用圖片上傳
-  placeholder: "歡迎留言討論～請遵守網路禮儀 💖"
+  placeholder: "💭 歡迎留言討論！請遵守網路禮儀～"
+  comment: true # 是否顯示評論數
+  copyright: true # 是否顯示版權信息
+  dark: auto # 深色模式 auto/true/false
   # 以下為可選配置
   option:
     lang: zh-TW
+    emoji: 
+      - https://unpkg.com/@waline/emojis@1.2.0/weibo
+      - https://unpkg.com/@waline/emojis@1.2.0/alus
+      - https://unpkg.com/@waline/emojis@1.2.0/bilibili
+      - https://unpkg.com/@waline/emojis@1.2.0/qq
+      - https://unpkg.com/@waline/emojis@1.2.0/tieba
+      - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
+    meta: ['nick', 'mail', 'link'] # 評論者信息字段
+    requiredMeta: ['nick', 'mail'] # 必填字段
+    avatar: 'mp' # Gravatar 頭像樣式
+    avatarCDN: 'https://sdn.geekzu.org/avatar/' # Gravatar CDN 地址（中國用戶推薦）
+    login: 'enable' # 登錄模式：enable/disable/force
+    wordLimit: 0 # 評論字數限制，0 表示無限制
+    pageSize: 10 # 評論列表分頁大小
     locale:
-      placeholder: "歡迎留言討論～"
+      placeholder: "💭 歡迎留言討論！請遵守網路禮儀～"
+      sofa: "來做第一個評論的人吧！"
+      submit: "提交"
+      reply: "回覆"
+      cancelReply: "取消回覆"
+      comment: "留言"
+      refresh: "重新整理"
+      more: "載入更多..."
+      preview: "預覽"
+      emoji: "表情"
+      uploadImage: "上傳圖片"
+      nick: "暱稱"
+      nickError: "暱稱不能少於3個字符"
+      mail: "郵箱"
+      mailError: "請填寫正確的郵件地址"
+      link: "網站"
+      optional: "可選"
+      gifSearchPlaceholder: "搜尋 GIF"
+      profile: "個人資料"
+      admin: "管理員"
+      sticky: "置頂"
+      word: "字"
+      wordHint: "評論字數限制：$0"
+      anonymous: "匿名"
+      login: "登錄"
+      logout: "登出"
+      signed: "已登錄"
+      approve: "通過"
+      waiting: "待審核"
+      spam: "垃圾"
+      unsticky: "取消置頂"
+      oldest: "按時間正序"
+      latest: "按時間倒序"
+      hottest: "按熱度排序"
+      reactionTitle: "你認為這篇文章怎麼樣？"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo

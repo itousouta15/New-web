@@ -30,12 +30,6 @@
     - name: GitHub
       color: "#181717"
       icon: https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png
-    - name: Linux
-      color: "#FCC624"
-      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
-    - name: Markdown
-      color: "#FFFFFF"
-      icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg
     - name: VS Code
       color: "#007ACC"
       icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg
