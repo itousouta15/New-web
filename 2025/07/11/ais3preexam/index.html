@@ -548,7 +548,7 @@ POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
 </script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 var pjax = new Pjax({
-  elements: 'a:not([target="_blank"])',
+  elements: 'a:not([target="_blank"]):not([href="mailto:"])',
   selectors: pjaxSelectors,
   cacheBust: false,
   analytics: false,
