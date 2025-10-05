@@ -1,0 +1,52 @@
+# 快取控制設定 - 用於 GitHub Pages
+# HTML 文件：短期快取，優先檢查更新
+*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# CSS/JS 文件：中期快取，支援版本控制
+*.css
+  Cache-Control: public, max-age=86400, must-revalidate
+*.js  
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# 圖片文件：長期快取
+*.png
+  Cache-Control: public, max-age=2592000
+*.jpg
+  Cache-Control: public, max-age=2592000
+*.jpeg
+  Cache-Control: public, max-age=2592000
+*.gif
+  Cache-Control: public, max-age=2592000
+*.svg
+  Cache-Control: public, max-age=2592000
+*.webp
+  Cache-Control: public, max-age=2592000
+*.ico
+  Cache-Control: public, max-age=2592000
+
+# 字體文件：超長期快取
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+*.eot
+  Cache-Control: public, max-age=31536000, immutable
+
+# 動態內容：不快取
+search.xml
+  Cache-Control: no-cache, no-store, must-revalidate
+sitemap.xml
+  Cache-Control: no-cache, no-store, must-revalidate
+atom.xml
+  Cache-Control: no-cache, no-store, must-revalidate
+rss.xml
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# manifest 和 service worker：短期快取
+manifest.json
+  Cache-Control: public, max-age=300
+service-worker.js
+  Cache-Control: public, max-age=0, must-revalidate

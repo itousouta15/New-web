@@ -1324,6 +1324,8 @@ inject:
   head:
     # 自定义css
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    # 快取控制腳本 - 確保用戶能及時看到更新
+    - <script src="/js/cache-control.js" defer></script>
 
   bottom:
     # 自定义js
