@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isInViewPortOfOneNoDis(pageBottomDomFlag || percentage > 90) && currentTop > 20) {
         $navTotop.classList.add("long");
-        $percentBtn.textContent = "返回顶部";
+        $percentBtn.textContent = "返回頂部";
       } else {
         $navTotop.classList.remove("long");
         $percentBtn.textContent = percentage;
@@ -1475,7 +1475,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 开发者工具键盘监听
   window.onkeydown = function (e) {
-    123 === e.keyCode && anzhiyu.snackbarShow("开发者模式已打开，请遵循GPL协议", !1);
+    123 === e.keyCode && anzhiyu.snackbarShow("開發者模式已打開，請遵循 GPL 協議", !1);
   };
 
   // 欢迎语
