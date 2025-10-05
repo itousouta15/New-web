@@ -23,7 +23,7 @@ module.exports = {
         networkTimeoutSeconds: 2,
         expiration: {
           maxEntries: 50,
-          maxAgeSeconds: 60  // 30分鐘（而不是6小時）
+          maxAgeSeconds: 600  // 30分鐘（而不是6小時）
         }
       }
     },
@@ -34,7 +34,7 @@ module.exports = {
         cacheName: 'static-resources',
         expiration: {
           maxEntries: 60,
-          maxAgeSeconds: 60  // 1小時（而不是1天）
+          maxAgeSeconds: 600  // 1小時（而不是1天）
         }
       }
     },
