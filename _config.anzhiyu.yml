@@ -166,7 +166,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: right
+  position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     # - /img/default_cover.jpg
@@ -518,7 +518,7 @@ footer:
     since: 2025
   custom_text:
   runtime:
-    enable: true
+    enable: false
     launch_time: 10/04/2025 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 努力學習中，持續進步！
@@ -545,7 +545,7 @@ footer:
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
         message: 本站採用知識共享署名－非商業性使用－相同方式共享 4.0 國際許可協議進行許可
   socialBar:
-    enable: false
+    enable: true
     centerImg:
     left:
       - title: email
@@ -554,9 +554,9 @@ footer:
       # - title: 微博
       #   link: https://weibo.com/u/6378063631
       #   icon: anzhiyu-icon-weibo
-      # - title: facebook
-      #   link: https://www.facebook.com/profile.php?id=100092208016287&sk=about
-      #   icon: anzhiyu-icon-facebook1
+      - title: facebook
+        link: https://www.facebook.com/itou.souta15
+        icon: anzhiyu-icon-facebook1
       - title: RSS
         link: atom.xml
         icon: anzhiyu-icon-rss
@@ -574,40 +574,32 @@ footer:
         link: /copyright
         icon: anzhiyu-icon-copyright-line
   list:
-    enable: false
+    enable: true
     randomFriends: 3
     project:
-      - title: 服务
+      - title: 連結
         links:
-          - title: 51la统计
-            link: https://v6.51.la/
-          - title: 十年之约
-            link: https://www.foreverblog.cn/
-          - title: 开往
-            link: https://github.com/travellings-link/travellings
+          - title: BLOG(舊站)
+            link: https://itousouta15.github.io/legacy-blog/
+          - title: SCAICT 中電會
+            link: https://SCAICT.org
       - title: 主題
         links:
-          - title: 文档
-            link: /docs/
-          - title: 源码
-            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-          - title: 更新日志
-            link: /update/
-      - title: 导航
+          - title: 源碼
+            link: https://github.com/itousouta15/itousouta15.github.io
+          - title: 開發日誌
+            link: /2025/10/05/devlog/
+      - title: 導航
         links:
-          - title: 即刻短文
+          - title: 碎碎念
             link: /essay/
-          - title: 友链文章
-            link: /fcircle/
           - title: 留言板
             link: /comments/
-      - title: 协议
+      - title: 協議
         links:
-          - title: 隐私协议
+          - title: 隱私協議
             link: /privacy/
-          - title: Cookies
-            link: /cookies/
-          - title: 版权协议
+          - title: 版權協議
             link: /copyright/
   footerBar:
     enable: true
