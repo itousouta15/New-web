@@ -548,15 +548,15 @@ footer:
     enable: true
     centerImg:
     left:
-      - title: email
-        link: mailto:itousouta15@gmail.com
-        icon: anzhiyu-icon-envelope
+      #- title: email
+      #  link: mailto:itousouta15@gmail.com
+      #  icon: anzhiyu-icon-envelope
       # - title: 微博
       #   link: https://weibo.com/u/6378063631
       #   icon: anzhiyu-icon-weibo
-      - title: facebook
-        link: https://www.facebook.com/itou.souta15
-        icon: anzhiyu-icon-facebook1
+      - title: Bilibili
+        link: https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0
+        icon: anzhiyu-icon-bilibili
       - title: RSS
         link: atom.xml
         icon: anzhiyu-icon-rss
@@ -564,9 +564,6 @@ footer:
       - title: Github
         link: https://github.com/itousouta15
         icon: anzhiyu-icon-github
-      - title: Bilibili
-        link: https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0
-        icon: anzhiyu-icon-bilibili
       # - title: 抖音
       #   link: https://v.douyin.com/DwCpMEy/
       #   icon: anzhiyu-icon-tiktok
@@ -575,7 +572,7 @@ footer:
         icon: anzhiyu-icon-copyright-line
   list:
     enable: true
-    randomFriends: 3
+    randomFriends: 2
     project:
       - title: 連結
         links:
