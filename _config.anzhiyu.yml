@@ -549,7 +549,7 @@ footer:
     centerImg:
     left:
       - title: email
-        link: itousouta15@gmail.com
+        link: mailto:itousouta15@gmail.com
         icon: anzhiyu-icon-envelope
       # - title: 微博
       #   link: https://weibo.com/u/6378063631
