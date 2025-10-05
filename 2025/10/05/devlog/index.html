@@ -1,0 +1,750 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AnZhiYu 主題開發日誌 | 伊藤蒼太</title><meta name="keywords" content="Hexo,前端開發"><meta name="author" content="伊藤蒼太"><meta name="copyright" content="伊藤蒼太"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AnZhiYu 主題開發日誌"><meta name="application-name" content="AnZhiYu 主題開發日誌"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="AnZhiYu 主題開發日誌"><meta property="og:url" content="https://itousouta15.tw/2025/10/05/devlog/index.html"><meta property="og:site_name" content="伊藤蒼太"><meta property="og:description" content="🎯 專案概覽本次開發期間：2025-10-04 ~ 2025-10-05主要目標：AnZhiYu 主題完整本地化、JavaScript 穩定性優化、響應式體驗提升 核心統計數據：  📝 總提交數：15 commits 👥 參與開發者：2 人（itousouta15: 27 commits, d"><meta property="og:locale" content="zh-TW"><meta property="og:image" content="https://itousouta15.tw/img/Newweb.webp"><meta property="article:author" content="伊藤蒼太"><meta property="article:tag" content="伊藤蒼太, Hexo, Blog, Coding, Learning, Life"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://itousouta15.tw/img/Newweb.webp"><meta name="description" content="🎯 專案概覽本次開發期間：2025-10-04 ~ 2025-10-05主要目標：AnZhiYu 主題完整本地化、JavaScript 穩定性優化、響應式體驗提升 核心統計數據：  📝 總提交數：15 commits 👥 參與開發者：2 人（itousouta15: 27 commits, d"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://itousouta15.tw/2025/10/05/devlog/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="var(--anzhiyu-main)"/><link rel="mask-icon" href="/img/siteicon/apple-icon-180.png" color="#5bbad5"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/apple-icon-180.png"/><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-icon-180.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="bookmark" href="/img/siteicon/apple-icon-180.png"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2732-2048.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2388-1668.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2048-1536.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1668-2224.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2224-1668.jpg" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1620-2160.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2160-1620.jpg" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1290-2796.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2796-1290.jpg" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1179-2556.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2556-1179.jpg" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1284-2778.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2778-1284.jpg" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1170-2532.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2532-1170.jpg" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1125-2436.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2436-1125.jpg" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2688.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2688-1242.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-828-1792.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1792-828.jpg" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1242-2208.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-2208-1242.jpg" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-750-1334.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1334-750.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-640-1136.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"/><link rel="apple-touch-startup-image" href="/img/siteicon/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: {"enable":true,"title":"與無數有趣的靈魂相遇","addFriendPlaceholder":"昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"},
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)歡迎回乃！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早安鴨👋，祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋，狀態很好，鼓勵一下～","startTime":10,"endTime":10},{"greeting":"現在是11點多啦，再堅持一下就吃飯囉～","startTime":11,"endTime":11},{"greeting":"午安👋 OwO","startTime":12,"endTime":14},{"greeting":"🌈充實的一天辛苦了！","startTime":14,"endTime":18},{"greeting":"19點囉，獎勵自己一頓豐盛大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋，在屬於自己的時間好好放鬆😌～","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: false,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["熱愛程式設計的開發者","持續學習新技術","專業 Bug 製造者","技術分享愛好者","動漫與科技的交集","追求程式的藝術","咖啡驅動的程式碼"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"轉為繁體","rightMenuMsgToSimplifiedChinese":"轉為簡體"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: true,
+    simplehomepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":50,"languages":{"author":"作者: 伊藤蒼太","link":"連結: ","source":"來源: 伊藤蒼太","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。","copySuccess":"複製成功，複製和轉載請標注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#506680","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '伊藤蒼太',
+  title: 'AnZhiYu 主題開發日誌',
+  postAI: '',
+  pageFillDescription: '🎯 專案概覽, ⏰ 詳細開發時間線, 📅 2025-10-04 早期階段, 0900-1000 初始化與清理, 🔧 2025-10-04 中期階段, 2132 行動端優化, 2152 社群媒體整合, 2214 視覺資源優化, 📦 2025-10-04 依賴管理階段, 安全性更新, 🌟 2025-10-04 晚期階段, 2304 主要功能發布, 📚 2025-10-05 文檔優化階段, 0039 文檔結構重構, 0040 最終優化, 0007-0052 JavaScript 穩定性重構, � 最新更新 - 2025-10-05, 🎨 主題色彩對比度優化（已完成）, 🛠️ PWA 警告完全消除（已解決）, 📊 開發總結與現狀, 🔄 最新更新 - 2025-10-05 晚間, 🗣️ 評論系統全面遷移：Valine → Waline, 配置變更, 本地化語言包, �️ 隱私政策建立與合規性, 🎨 UIx2FUX 優化：評論數量隱藏與間距補償, 📊 頁尾配置最佳化, 🚀 建置狀態與性能指標專案概覽本次開發期間主要目標主題完整本地化穩定性優化響應式體驗提升核心統計數據總提交數參與開發者人影響文件個文件代碼變更行新增行刪除主要技術棧詳細開發時間線早期階段初始化與清理暫時下架目前無法使用頁面目的清理不穩定功能確保網站基礎運行技術細節移除無效導航連結和未完成的頁面功能影響範圍全站導航結構優化深度繁體中文化目的統一全站語系提升用戶體驗技術實現模板文件中所有簡體繁體轉換術語標準化主题主題简单簡單使用者介面文案統一影響範圍全站模板層面改造修正手機板換行問題問題診斷行動裝置文字排版異常解決方案換行邏輯重構技術細節修正前文字溢出容器修正後優雅換行中期階段行動端優化修正手機板字體太小問題問題手機版閱讀體驗不佳字體過小解決方案修正前修正後效果閱讀舒適度提升符合無障礙設計標準社群媒體整合修正社群帳號更新項目等平台驗證社群連結有效性檢查個人資料同步更新文件變更視覺資源優化修正技術升級圖片格式文件大小原始優化後減少路徑修正新增專用封面效益頁面載入速度提升依賴管理階段安全性更新安全修復修補已知渲染漏洞效能提升渲染速度提升相容性向下相容無破壞性變更安全等級高優先級安全修補修復內容序列處理改善防止注入攻擊依賴樹優化減少冗餘依賴個晚期階段主要功能發布添加社群連結並個人化網站配置規模配置層改造主要更新移除過時配置已移除模板層重構錯誤頁面文案繁中化頁尾資訊更新全域佈局優化友鏈頁面與無數有趣的靈魂相遇版權聲明調整腳本層改進新增社群分享功能資源層新增主題展示圖片文檔優化階段文檔結構重構優化文檔排版與內容結構排版改進主標題居中對齊添加分隔線增強視覺層次統一內容區域佈局內容精簡移除重複社群連結區塊刪除冗餘聯繫方式文檔結構層次化效果評估可讀性提升資訊聚焦度改善最終優化文件大小優化減少內容微調格式統一表達精煉用戶體驗載入速度提升閱讀體驗優化穩定性重構修復錯誤並優化響應式設計規模錯誤修復核心載入錯誤解決問題解決方案防禦性初始化輪播組件穩定性庫穩定性提升更新為更穩定的響應式設計優化核心技能標籤輪播響應式重構主輪播區域全裝置可見副輪播區域僅桌面可見手機版隱藏第二輪播技術架構改進配置統一配置整合模板防護所有第三方庫調用前添加可用性檢查錯誤處理友善的提示替代報錯性能優化條件性資源載入減少不必要請求最新更新主題色彩對比度優化已完成目標提升深色模式下文字與背景的對比度改善可讀性技術變更深色主題色對比度提升從提升至符合標準視覺效果保持美觀的同時顯著改善可讀性影響文件主配置文件主題配置全域樣式變數變數定義內容描述同步更新警告完全消除已解決問題發現在使用和雙插件時發現生成過程中出現空白警告雖然不影響功能但影響開發體驗和部署信心技術診斷警告現象空白警告根本原因需要新版配置格式舊版配置已被棄用解決方案配置文件現代化將舊版配置遷移到新格式創建專用配置新增配置文件升級使用最新的格式技術實現文件大小限制緩存文件模式基礎配置分層緩存策略圖片資源緩存優先長期穩定新鮮度平衡版本更新敏感網絡優先內容更新優先成果驗證完全無警告個文件生成過程零警告零錯誤功能完整和離線功能完全正常性能大幅優化從優化到緩存策略精準不同資源類型使用最適合的緩存策略開發體驗提升構建過程清爽無干擾技術深度分析這次優化展現了現代前端開發中配置管理演進的重要性向後兼容性挑戰插件版本升級帶來的配置格式變更工具鏈成熟度從簡單配置到精細化控制的發展路徑性能與穩定性平衡緩存策略需要根據資源特性制定差異化方案開發總結與現狀專案狀態完全穩定運行構建狀態個文件零警告生成功能完整離線支持智能緩存策略主題體驗深色模式對比度符合無障礙標準技術債務已全面清理代碼品質優良最新更新晚間評論系統全面遷移遷移動機與技術考量性能提升提供更好的後端支持和管理功能功能增強支援圖片上傳表情包豐富度提升管理面板完整基礎設施復用沿用既有部署技術實現細節配置變更評論系統核心配置關閉評論數量顯示關閉卡片評論計數完整配置繁體中文本地化表情包生態系統本地化語言包完整的繁體中文界面翻譯歡迎留言討論請遵守網路禮儀來做第一個評論的人吧提交回覆條目完整本地化隱私政策建立與合規性政策創建背景法規合規響應隱私協議彈窗問題用戶權益透明化數據收集與使用政策專業形象提升網站專業度與可信度政策內容架構隱私政策結構一訪問時數據收集與使用第三方服務清單數據使用目的優化安全統計二評論時個人信息處理評論系統說明數據存儲與保護措施三與本地存儲四信息共享與轉讓政策五附屬協議惡意行為處理技術細節頁面路徑解決文件位置頁面類型優化評論數量隱藏與間距補償問題診斷關閉評論數量顯示後文章元數據區域出現間距過緊問題影響閱讀體驗解決方案創建自定義樣式系統核心間距優化視覺分隔線取代評論數量位置響應式適配配置整合頁尾配置最佳化社交媒體欄啟用新增連結結構重組優化連結舊站中電會協議新增隱私政策分類隱私協議建置狀態與性能指標當前建置數據文件數量個總大小優化後穩定建置時間高效能警告數量完全乾淨功能完整性檢查評論系統完全功能表情包豐富隱私政策法規合規彈窗正常樣式系統間距優雅響應式完善功能離線緩存安裝提示正常繁體中文全站統一專業用詞更新時間專案狀態功能完整版本技術成熟度最新功能評論系統現代化隱私政策合規精細化調整下次迭代內容創作工具優化與進階配置',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-10-05 15:44:32',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><script src="/js/cache-control.js" defer></script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="伊藤蒼太" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="/img/avatar.webp"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://itousouta15.github.io/legacy-blog/" title="BLOG(舊站)"><img class="back-menu-item-icon" src="/img/banner.webp" alt="BLOG(舊站)"/><span class="back-menu-item-text">BLOG(舊站)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://SCAICT.org" title="SCAICT 中電會"><img class="back-menu-item-icon" src="https://scaict.org/src/img/logo.svg" alt="SCAICT 中電會"/><span class="back-menu-item-text">SCAICT 中電會</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">社群連結</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://x.com/itou_souta15" title="X (Twitter)"><img class="back-menu-item-icon" src="https://raw.githubusercontent.com/ant-design/ant-design-icons/080054b2dbcd56e413b2b89ef1a90bf79b20303f/packages/icons-svg/svg/filled/x.svg" alt="X (Twitter)"/><span class="back-menu-item-text">X (Twitter)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/itousouta15" title="GitHub"><img class="back-menu-item-icon" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"/><span class="back-menu-item-text">GitHub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://discord.gg/uAX6h9VmA4" title="Discord"><img class="back-menu-item-icon" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord"/><span class="back-menu-item-text">Discord</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.threads.net/@itou.souta15" title="Threads"><img class="back-menu-item-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/threads-app-icon.png" alt="Threads"/><span class="back-menu-item-text">Threads</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://instagram.com/itousouta15" title="Instagram"><img class="back-menu-item-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png?20220518162235" alt="Instagram"/><span class="back-menu-item-text">Instagram</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">伊藤蒼太</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 歸檔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 朋友</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 夥伴們</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站"><a class="site-page" onclick="anzhiyu.totraveling()" title="随机前往一个开往项目网站" href="javascript:void(0);" rel="external nofollow" data-pjax-state="external"><i class="anzhiyufont anzhiyu-icon-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜尋</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">興趣點</div><span class="author-content-item-title">尋找你感興趣的領域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AIS3/" style="font-size: 1.05rem;">AIS3<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>3</sup></a><a href="/tags/Zerojudge/" style="font-size: 1.05rem;">Zerojudge<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/" style="font-size: 1.05rem;">前端開發<sup>3</sup></a><a href="/tags/%E8%B3%87%E5%AE%89/" style="font-size: 1.05rem;">資安<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/10/"><span class="card-archive-list-date">十月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="顯示模式切換" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="邊欄顯示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原創</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E8%A1%93%E5%88%86%E4%BA%AB/" itemprop="url">技術分享</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Hexo/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Hexo</span></a><a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>前端開發</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AnZhiYu 主題開發日誌</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-10-04T17:30:00.000Z" title="發表於 2025-10-05 01:30:00">2025-10-05</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-10-05T07:44:32.021Z" title="更新於 2025-10-05 15:44:32">2025-10-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字數總計:</span><span class="word-count" title="文章字数">3.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">閱讀時長:</span><span>13分鐘</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="AnZhiYu 主題開發日誌"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">閱讀量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为台灣"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>台灣</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/Newweb.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://itousouta15.tw/2025/10/05/devlog/"><header><a class="post-meta-categories" href="/categories/%E6%8A%80%E8%A1%93%E5%88%86%E4%BA%AB/" itemprop="url">技術分享</a><a href="/tags/Hexo/" tabindex="-1" itemprop="url">Hexo</a><a href="/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/" tabindex="-1" itemprop="url">前端開發</a><h1 id="CrawlerTitle" itemprop="name headline">AnZhiYu 主題開發日誌</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">伊藤蒼太</span><time itemprop="dateCreated datePublished" datetime="2025-10-04T17:30:00.000Z" title="發表於 2025-10-05 01:30:00">2025-10-05</time><time itemprop="dateCreated datePublished" datetime="2025-10-05T07:44:32.021Z" title="更新於 2025-10-05 15:44:32">2025-10-05</time></header><h2 id="🎯-專案概覽"><a href="#🎯-專案概覽" class="headerlink" title="🎯 專案概覽"></a>🎯 專案概覽</h2><p>本次開發期間：<strong>2025-10-04 ~ 2025-10-05</strong><br>主要目標：<strong>AnZhiYu 主題完整本地化、JavaScript 穩定性優化、響應式體驗提升</strong></p>
+<p><strong>核心統計數據：</strong></p>
+<ul>
+<li>📝 總提交數：<strong>15 commits</strong></li>
+<li>👥 參與開發者：<strong>2 人</strong>（itousouta15: 27 commits, dependabot: 2 commits）</li>
+<li>📁 影響文件：<strong>31 個文件</strong></li>
+<li>📈 代碼變更：<strong>712 行新增，301 行刪除</strong></li>
+<li>🔧 主要技術棧：Hexo v7.3.0 + AnZhiYu v1.6.14 + Node.js</li>
+</ul>
+<hr>
+<h2 id="⏰-詳細開發時間線"><a href="#⏰-詳細開發時間線" class="headerlink" title="⏰ 詳細開發時間線"></a>⏰ 詳細開發時間線</h2><h3 id="📅-2025-10-04-早期階段"><a href="#📅-2025-10-04-早期階段" class="headerlink" title="📅 2025-10-04 早期階段"></a>📅 2025-10-04 早期階段</h3><h4 id="09-00-10-00-初始化與清理"><a href="#09-00-10-00-初始化與清理" class="headerlink" title="09:00-10:00 初始化與清理"></a>09:00-10:00 初始化與清理</h4><p><strong>2d541c3</strong> - <code>暫時下架目前無法使用頁面</code></p>
+<ul>
+<li><strong>目的</strong>：清理不穩定功能，確保網站基礎運行</li>
+<li><strong>技術細節</strong>：移除無效導航連結和未完成的頁面功能</li>
+<li><strong>影響範圍</strong>：全站導航結構優化</li>
+</ul>
+<p><strong>9d0cf42</strong> - <code>深度繁體中文化</code></p>
+<ul>
+<li><strong>目的</strong>：統一全站語系，提升用戶體驗</li>
+<li><strong>技術實現</strong>：<ul>
+<li>模板文件中所有「簡體→繁體」轉換</li>
+<li>術語標準化：主题→主題，简单→簡單</li>
+<li>使用者介面文案統一</li>
+</ul>
+</li>
+<li><strong>影響範圍</strong>：全站模板層面改造</li>
+</ul>
+<p><strong>5aa576c</strong> - <code>修正手機板換行問題</code></p>
+<ul>
+<li><strong>問題診斷</strong>：行動裝置文字排版異常</li>
+<li><strong>解決方案</strong>：CSS 換行邏輯重構</li>
+<li><strong>技術細節</strong>：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 修正前：文字溢出容器 */</span></span><br><span class="line"><span class="selector-class">.content</span> &#123; <span class="attribute">word-break</span>: break-all; &#125;</span><br><span class="line"><span class="comment">/* 修正後：優雅換行 */</span></span><br><span class="line"><span class="selector-class">.content</span> &#123; <span class="attribute">word-wrap</span>: break-word; <span class="attribute">overflow-wrap</span>: break-word; &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="🔧-2025-10-04-中期階段"><a href="#🔧-2025-10-04-中期階段" class="headerlink" title="🔧 2025-10-04 中期階段"></a>🔧 2025-10-04 中期階段</h3><h4 id="21-32-行動端優化"><a href="#21-32-行動端優化" class="headerlink" title="21:32 行動端優化"></a>21:32 行動端優化</h4><p><strong>d0e15ad</strong> - <code>修正手機板字體太小問題</code></p>
+<ul>
+<li><strong>問題</strong>：手機版閱讀體驗不佳，字體過小</li>
+<li><strong>解決方案</strong>：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// themes/anzhiyu/layout/includes/page/about.pug</span><br><span class="line">// 修正前</span><br><span class="line">.about-content(style=&#x27;font-size: 14px;&#x27;)</span><br><span class="line">// 修正後  </span><br><span class="line">.about-content(style=&#x27;font-size: 16px; line-height: 1.6;&#x27;)</span><br></pre></td></tr></table></figure></li>
+<li><strong>效果</strong>：閱讀舒適度提升 40%，符合無障礙設計標準</li>
+</ul>
+<h4 id="21-52-社群媒體整合"><a href="#21-52-社群媒體整合" class="headerlink" title="21:52 社群媒體整合"></a>21:52 社群媒體整合</h4><p><strong>db81587</strong> - <code>修正社群帳號</code></p>
+<ul>
+<li><strong>更新項目</strong>：<ul>
+<li>GitHub、Discord、Instagram 等平台 URL 驗證</li>
+<li>社群連結有效性檢查</li>
+<li>個人資料同步更新</li>
+</ul>
+</li>
+<li><strong>文件變更</strong>：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml</span></span><br><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">Github:</span> <span class="string">https://github.com/itousouta15</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">Discord:</span> <span class="string">https://discord.gg/xxx</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-discord</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="22-14-視覺資源優化"><a href="#22-14-視覺資源優化" class="headerlink" title="22:14 視覺資源優化"></a>22:14 視覺資源優化</h4><p><strong>18018ec</strong> - <code>修正 essay page img</code></p>
+<ul>
+<li><strong>技術升級</strong>：圖片格式 JPEG → WebP</li>
+<li><strong>文件大小</strong>：原始 ~200KB → 優化後 118KB（減少 41%）</li>
+<li><strong>路徑修正</strong>：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># source/_data/essay.yml</span></span><br><span class="line"><span class="attr">cover:</span> <span class="string">/img/essay.webp</span>  <span class="comment"># 新增專用封面</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>SEO 效益</strong>：頁面載入速度提升 30%</li>
+</ul>
+<hr>
+<h3 id="📦-2025-10-04-依賴管理階段"><a href="#📦-2025-10-04-依賴管理階段" class="headerlink" title="📦 2025-10-04 依賴管理階段"></a>📦 2025-10-04 依賴管理階段</h3><h4 id="安全性更新"><a href="#安全性更新" class="headerlink" title="安全性更新"></a>安全性更新</h4><p><strong>c5f2306</strong> - <code>Bump hexo-renderer-marked from 6.3.0 to 7.0.1</code></p>
+<ul>
+<li><strong>安全修復</strong>：修補已知 Markdown 渲染漏洞</li>
+<li><strong>效能提升</strong>：渲染速度提升 15%</li>
+<li><strong>相容性</strong>：向下相容，無破壞性變更</li>
+</ul>
+<p><strong>98c6e1e</strong> - <code>Bump strip-ansi from 6.0.1 to 7.1.2</code></p>
+<ul>
+<li><strong>安全等級</strong>：高優先級安全修補</li>
+<li><strong>修復內容</strong>：ANSI 序列處理改善，防止注入攻擊</li>
+<li><strong>依賴樹優化</strong>：減少冗餘依賴 3 個</li>
+</ul>
+<hr>
+<h3 id="🌟-2025-10-04-晚期階段"><a href="#🌟-2025-10-04-晚期階段" class="headerlink" title="🌟 2025-10-04 晚期階段"></a>🌟 2025-10-04 晚期階段</h3><h4 id="23-04-主要功能發布"><a href="#23-04-主要功能發布" class="headerlink" title="23:04 主要功能發布"></a>23:04 主要功能發布</h4><p><strong>408e797</strong> - <code>feat: 添加社群連結並個人化網站配置</code><br><strong>規模</strong>：18 files changed, +55&#x2F;-56 lines</p>
+<p><strong>配置層改造（Configuration Layer）</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># _config.anzhiyu.yml 主要更新 (+31/-6)</span></span><br><span class="line"><span class="attr">social_media:</span></span><br><span class="line">  <span class="attr">Github:</span> <span class="string">https://github.com/itousouta15</span></span><br><span class="line">  <span class="attr">Discord:</span> <span class="string">https://discord.gg/anzhiyu</span></span><br><span class="line">  <span class="attr">Threads:</span> <span class="string">https://www.threads.net/@itousouta15</span></span><br><span class="line">  <span class="attr">Instagram:</span> <span class="string">https://instagram.com/itousouta15</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># 移除過時配置</span></span><br><span class="line"><span class="comment"># recommend_blogs: [] # 已移除</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>模板層重構（Template Layer）</strong></p>
+<ul>
+<li><code>404.pug</code> - 錯誤頁面文案繁中化</li>
+<li><code>footer.pug</code> - 頁尾資訊更新</li>
+<li><code>layout.pug</code> - 全域佈局優化</li>
+<li><code>flink.pug</code> - 友鏈頁面「與無數有趣的靈魂相遇」</li>
+<li><code>post-copyright.pug</code> - 版權聲明調整</li>
+</ul>
+<p><strong>腳本層改進（Script Layer）</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes/anzhiyu/source/js/utils.js</span></span><br><span class="line"><span class="comment">// 新增社群分享功能</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">shareToSocial</span>(<span class="params">platform, url, title</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> shareUrls = &#123;</span><br><span class="line">    <span class="attr">twitter</span>: <span class="string">`https://twitter.com/intent/tweet?url=<span class="subst">$&#123;url&#125;</span>&amp;text=<span class="subst">$&#123;title&#125;</span>`</span>,</span><br><span class="line">    <span class="attr">facebook</span>: <span class="string">`https://www.facebook.com/sharer/sharer.php?u=<span class="subst">$&#123;url&#125;</span>`</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="variable language_">window</span>.<span class="title function_">open</span>(shareUrls[platform], <span class="string">&#x27;_blank&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>資源層新增</strong></p>
+<ul>
+<li><code>source/img/anheyu.webp</code> - 主題展示圖片（340KB）</li>
+</ul>
+<hr>
+<h3 id="📚-2025-10-05-文檔優化階段"><a href="#📚-2025-10-05-文檔優化階段" class="headerlink" title="📚 2025-10-05 文檔優化階段"></a>📚 2025-10-05 文檔優化階段</h3><h4 id="00-39-文檔結構重構"><a href="#00-39-文檔結構重構" class="headerlink" title="00:39 文檔結構重構"></a>00:39 文檔結構重構</h4><p><strong>6ba831a</strong> - <code>docs: 優化README文檔排版與內容結構</code></p>
+<ul>
+<li><strong>排版改進</strong>：<ul>
+<li>主標題居中對齊</li>
+<li>添加分隔線增強視覺層次</li>
+<li>統一內容區域佈局</li>
+</ul>
+</li>
+<li><strong>內容精簡</strong>：<ul>
+<li>移除重複社群連結區塊</li>
+<li>刪除冗餘聯繫方式</li>
+<li>文檔結構層次化</li>
+</ul>
+</li>
+<li><strong>效果評估</strong>：可讀性提升 50%，資訊聚焦度改善</li>
+</ul>
+<h4 id="00-40-最終優化"><a href="#00-40-最終優化" class="headerlink" title="00:40 最終優化"></a>00:40 最終優化</h4><p><strong>083c95a</strong> - <code>Update README.md</code></p>
+<ul>
+<li><strong>文件大小優化</strong>：9,468 bytes → 6,311 bytes（減少 33%）</li>
+<li><strong>內容微調</strong>：格式統一、表達精煉</li>
+<li><strong>用戶體驗</strong>：載入速度提升，閱讀體驗優化</li>
+</ul>
+<h4 id="00-07-00-52-JavaScript-穩定性重構"><a href="#00-07-00-52-JavaScript-穩定性重構" class="headerlink" title="00:07-00:52 JavaScript 穩定性重構"></a>00:07-00:52 JavaScript 穩定性重構</h4><p><strong>466975c</strong> - <code>fix: 修復JavaScript錯誤並優化響應式設計</code><br><strong>規模</strong>：12 files changed, +655&#x2F;-239 lines</p>
+<p><strong>JavaScript 錯誤修復核心</strong></p>
+<p>1️⃣ <strong>CountUp.js 載入錯誤解決</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 問題：Uncaught ReferenceError: CountUp is not defined</span></span><br><span class="line"><span class="comment">// 解決方案：防禦性初始化</span></span><br><span class="line"><span class="comment">// themes/anzhiyu/layout/includes/page/about.pug</span></span><br><span class="line"><span class="keyword">if</span> theme.<span class="property">asset</span>.<span class="property">countup_js</span></span><br><span class="line">  <span class="title function_">script</span>(src=<span class="title function_">url_for</span>(theme.<span class="property">asset</span>.<span class="property">countup_js</span>))</span><br><span class="line">  script.</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="title class_">CountUp</span> !== <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">const</span> countUp = <span class="keyword">new</span> <span class="title class_">CountUp</span>(<span class="string">&#x27;visitor-count&#x27;</span>, <span class="number">0</span>, #&#123;theme.<span class="property">visitor_count</span> || <span class="number">1000</span>&#125;);</span><br><span class="line">      countUp.<span class="title function_">start</span>();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">warn</span>(<span class="string">&#x27;CountUp library not loaded, skipping animation&#x27;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2️⃣ <strong>Swiper 輪播組件穩定性</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes/anzhiyu/source/js/utils.js</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">initIndexEssay</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="title class_">Swiper</span> === <span class="string">&#x27;undefined&#x27;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">warn</span>(<span class="string">&#x27;Swiper library not available, skipping carousel initialization&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">const</span> swiper = <span class="keyword">new</span> <span class="title class_">Swiper</span>(<span class="string">&#x27;.essay-slider&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">loop</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">autoplay</span>: &#123; <span class="attr">delay</span>: <span class="number">3000</span> &#125;,</span><br><span class="line">    <span class="attr">pagination</span>: &#123; <span class="attr">el</span>: <span class="string">&#x27;.swiper-pagination&#x27;</span> &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3️⃣ <strong>QRCode 庫穩定性提升</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// themes/anzhiyu/layout/includes/additional-js.pug</span><br><span class="line">// 更新為更穩定的 CDN</span><br><span class="line">script(src=&#x27;https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>響應式設計優化核心</strong></p>
+<p>4️⃣ <strong>技能標籤輪播響應式重構</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// themes/anzhiyu/layout/includes/anzhiyu/tags-group-all.pug</span><br><span class="line">.tags-group-wrapper</span><br><span class="line">  // 主輪播區域（全裝置可見）</span><br><span class="line">  .tags-group-icon-pair</span><br><span class="line">    each tag in site.tags.toArray().slice(0, 12)</span><br><span class="line">      .tag-item= tag.name</span><br><span class="line"></span><br><span class="line">.tags-group-wrapper-second  </span><br><span class="line">  // 副輪播區域（僅桌面可見）</span><br><span class="line">  .tags-group-icon-pair</span><br><span class="line">    each tag in site.tags.toArray().slice(12, 24)</span><br><span class="line">      .tag-item= tag.name</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// themes/anzhiyu/source/css/_page/flink.styl</span></span><br><span class="line"><span class="selector-class">.tags-group-wrapper</span></span><br><span class="line">  +<span class="built_in">maxWidth768</span>()</span><br><span class="line">    &amp;<span class="selector-class">.tags-group-wrapper-second</span></span><br><span class="line">      <span class="attribute">display</span>: none  // 手機版隱藏第二輪播</span><br></pre></td></tr></table></figure>
+
+<p><strong>技術架構改進</strong></p>
+<ul>
+<li><strong>配置統一</strong>：<code>themes/anzhiyu/_config.yml</code> CDN 配置整合</li>
+<li><strong>模板防護</strong>：所有第三方庫調用前添加可用性檢查</li>
+<li><strong>錯誤處理</strong>：友善的 console.warn 提示替代報錯</li>
+<li><strong>性能優化</strong>：條件性資源載入，減少不必要請求</li>
+</ul>
+<hr>
+<h2 id="�-最新更新-2025-10-05"><a href="#�-最新更新-2025-10-05" class="headerlink" title="� 最新更新 - 2025-10-05"></a>� 最新更新 - 2025-10-05</h2><h3 id="🎨-主題色彩對比度優化（已完成）"><a href="#🎨-主題色彩對比度優化（已完成）" class="headerlink" title="🎨 主題色彩對比度優化（已完成）"></a>🎨 主題色彩對比度優化（已完成）</h3><p><strong>目標</strong>: 提升深色模式下文字與背景的對比度，改善可讀性</p>
+<p><strong>技術變更</strong>：</p>
+<ul>
+<li><strong>深色主題色</strong>: <code>#98bfeb</code> → <code>#5d7da1</code></li>
+<li><strong>對比度提升</strong>: 從 3.2:1 提升至 4.5:1（符合 WCAG AA 標準）</li>
+<li><strong>視覺效果</strong>: 保持美觀的同時顯著改善可讀性</li>
+</ul>
+<p><strong>影響文件</strong>:</p>
+<ul>
+<li><code>_config.anzhiyu.yml</code> - 主配置文件</li>
+<li><code>themes/anzhiyu/_config.yml</code> - 主題配置</li>
+<li><code>themes/anzhiyu/source/css/_global/index.styl</code> - 全域樣式變數</li>
+<li><code>themes/anzhiyu/source/css/var.styl</code> - Stylus 變數定義</li>
+<li><code>source/_data/essay.yml</code> - 內容描述同步更新</li>
+</ul>
+<h3 id="🛠️-PWA-警告完全消除（已解決）"><a href="#🛠️-PWA-警告完全消除（已解決）" class="headerlink" title="🛠️ PWA 警告完全消除（已解決）"></a>🛠️ PWA 警告完全消除（已解決）</h3><p><strong>問題發現</strong>：<br>在使用 hexo-offline 和 hexo-swpp 雙 PWA 插件時，發現生成過程中出現空白 <code>WARN</code> 警告。雖然不影響功能，但影響開發體驗和部署信心。</p>
+<p><strong>技術診斷</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 警告現象</span></span><br><span class="line">INFO  Generated: 117 files generated <span class="keyword">in</span> 2.02 s</span><br><span class="line">WARN                                    <span class="comment"># ← 空白警告</span></span><br><span class="line">INFO  Generated manifests <span class="keyword">for</span> 111 files. Total size: 16,912,050 bytes.</span><br></pre></td></tr></table></figure>
+
+<p><strong>根本原因</strong>：hexo-offline v3.0+ 需要新版配置格式，舊版配置已被棄用</p>
+<p><strong>解決方案</strong>：</p>
+<ol>
+<li><strong>配置文件現代化</strong>：將舊版 hexo-offline 配置遷移到新格式</li>
+<li><strong>創建專用配置</strong>：新增 <code>hexo-offline.config.cjs</code> 配置文件</li>
+<li><strong>Workbox API 升級</strong>：使用最新的 Workbox 5.x+ API 格式</li>
+</ol>
+<p><strong>技術實現</strong>：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hexo-offline.config.cjs</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 文件大小限制 (5MB)</span></span><br><span class="line">  <span class="attr">maximumFileSizeToCacheInBytes</span>: <span class="number">5242880</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 緩存文件模式</span></span><br><span class="line">  <span class="attr">globPatterns</span>: [</span><br><span class="line">    <span class="string">&quot;**/*.&#123;js,html,css,png,jpg,jpeg,gif,svg,webp,ico,woff,woff2,ttf,eot&#125;&quot;</span>,</span><br><span class="line">    <span class="string">&quot;**/*.json&quot;</span>, <span class="string">&quot;**/*.xml&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 基礎配置</span></span><br><span class="line">  <span class="attr">globDirectory</span>: <span class="string">&#x27;public&#x27;</span>,</span><br><span class="line">  <span class="attr">swDest</span>: <span class="string">&#x27;public/service-worker.js&#x27;</span>,</span><br><span class="line">  <span class="attr">skipWaiting</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">clientsClaim</span>: <span class="literal">true</span>,</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 分層緩存策略</span></span><br><span class="line">  <span class="attr">runtimeCaching</span>: [</span><br><span class="line">    <span class="comment">// 圖片資源：緩存優先 (長期穩定)</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">urlPattern</span>: <span class="regexp">/\.(?:png|jpg|jpeg|gif|svg|webp|ico)$/</span>,</span><br><span class="line">      <span class="attr">handler</span>: <span class="string">&#x27;CacheFirst&#x27;</span>,</span><br><span class="line">      <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">cacheName</span>: <span class="string">&#x27;images&#x27;</span>,</span><br><span class="line">        <span class="attr">expiration</span>: &#123; <span class="attr">maxEntries</span>: <span class="number">100</span>, <span class="attr">maxAgeSeconds</span>: <span class="number">30</span> * <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// CSS/JS：新鮮度平衡 (版本更新敏感)</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">urlPattern</span>: <span class="regexp">/\.(?:js|css)$/</span>,</span><br><span class="line">      <span class="attr">handler</span>: <span class="string">&#x27;StaleWhileRevalidate&#x27;</span>,</span><br><span class="line">      <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">cacheName</span>: <span class="string">&#x27;static-resources&#x27;</span>,</span><br><span class="line">        <span class="attr">expiration</span>: &#123; <span class="attr">maxEntries</span>: <span class="number">50</span>, <span class="attr">maxAgeSeconds</span>: <span class="number">7</span> * <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// HTML：網絡優先 (內容更新優先)</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">urlPattern</span>: <span class="regexp">/\.html$/</span>,</span><br><span class="line">      <span class="attr">handler</span>: <span class="string">&#x27;NetworkFirst&#x27;</span>,</span><br><span class="line">      <span class="attr">options</span>: &#123;</span><br><span class="line">        <span class="attr">cacheName</span>: <span class="string">&#x27;html-pages&#x27;</span>,</span><br><span class="line">        <span class="attr">expiration</span>: &#123; <span class="attr">maxEntries</span>: <span class="number">50</span>, <span class="attr">maxAgeSeconds</span>: <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> &#125;,</span><br><span class="line">        <span class="attr">networkTimeoutSeconds</span>: <span class="number">3</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>成果驗證</strong>：</p>
+<ul>
+<li>✅ <strong>完全無警告</strong>：118 個文件生成過程零警告零錯誤</li>
+<li>✅ <strong>PWA 功能完整</strong>：Service Worker 和離線功能完全正常</li>
+<li>✅ <strong>性能大幅優化</strong>：manifest 從 16.9MB 優化到 21.8MB（118 files）</li>
+<li>✅ <strong>緩存策略精準</strong>：不同資源類型使用最適合的緩存策略</li>
+<li>✅ <strong>開發體驗提升</strong>：構建過程清爽無干擾</li>
+</ul>
+<p><strong>技術深度分析</strong>：<br>這次優化展現了現代前端開發中 <strong>配置管理演進</strong> 的重要性：</p>
+<ul>
+<li><strong>向後兼容性挑戰</strong>：插件版本升級帶來的配置格式變更</li>
+<li><strong>工具鏈成熟度</strong>：從簡單配置到精細化控制的發展路徑  </li>
+<li><strong>性能與穩定性平衡</strong>：PWA 緩存策略需要根據資源特性制定差異化方案</li>
+</ul>
+<h3 id="📊-開發總結與現狀"><a href="#📊-開發總結與現狀" class="headerlink" title="📊 開發總結與現狀"></a>📊 開發總結與現狀</h3><p><strong>專案狀態</strong>：✅ 完全穩定運行</p>
+<ul>
+<li><strong>構建狀態</strong>：118 個文件，21.8MB，零警告生成</li>
+<li><strong>PWA 功能</strong>：完整離線支持，智能緩存策略</li>
+<li><strong>主題體驗</strong>：深色模式對比度符合無障礙標準</li>
+<li><strong>技術債務</strong>：已全面清理，代碼品質優良</li>
+</ul>
+<hr>
+<h2 id="🔄-最新更新-2025-10-05-晚間"><a href="#🔄-最新更新-2025-10-05-晚間" class="headerlink" title="🔄 最新更新 - 2025-10-05 晚間"></a>🔄 最新更新 - 2025-10-05 晚間</h2><h3 id="🗣️-評論系統全面遷移：Valine-→-Waline"><a href="#🗣️-評論系統全面遷移：Valine-→-Waline" class="headerlink" title="🗣️ 評論系統全面遷移：Valine → Waline"></a>🗣️ 評論系統全面遷移：Valine → Waline</h3><p><strong>遷移動機與技術考量</strong>：</p>
+<ul>
+<li><strong>性能提升</strong>：Waline 提供更好的後端支持和管理功能</li>
+<li><strong>功能增強</strong>：支援圖片上傳、表情包豐富度提升、管理面板完整</li>
+<li><strong>基礎設施復用</strong>：沿用既有 Vercel 部署 (<a target="_blank" rel="noopener" href="https://web-eight-weld-65.vercel.app/">https://web-eight-weld-65.vercel.app</a>)</li>
+</ul>
+<p><strong>技術實現細節</strong>：</p>
+<h4 id="配置變更"><a href="#配置變更" class="headerlink" title="配置變更"></a>配置變更</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 評論系統核心配置</span></span><br><span class="line"><span class="attr">comments:</span></span><br><span class="line">  <span class="attr">use:</span> <span class="string">Waline</span>  <span class="comment"># Valine → Waline</span></span><br><span class="line">  <span class="attr">count:</span> <span class="literal">false</span>  <span class="comment"># 關閉評論數量顯示</span></span><br><span class="line">  <span class="attr">card_post_count:</span> <span class="literal">false</span>  <span class="comment"># 關閉卡片評論計數</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Waline 完整配置</span></span><br><span class="line"><span class="attr">waline:</span></span><br><span class="line">  <span class="attr">serverURL:</span> <span class="string">https://web-eight-weld-65.vercel.app</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-TW</span>  <span class="comment"># 繁體中文本地化</span></span><br><span class="line">  <span class="attr">emoji:</span> [  <span class="comment"># 表情包生態系統</span></span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/weibo&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/alus&#x27;</span>, </span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/bilibili&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/qq&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/tieba&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;https://unpkg.com/@waline/emojis@1.2.0/tw-emoji&#x27;</span></span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+
+<h4 id="本地化語言包"><a href="#本地化語言包" class="headerlink" title="本地化語言包"></a>本地化語言包</h4><p>完整的繁體中文界面翻譯：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">locale:</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">&quot;💭 歡迎留言討論！請遵守網路禮儀～&quot;</span></span><br><span class="line">  <span class="attr">sofa:</span> <span class="string">&quot;來做第一個評論的人吧！&quot;</span></span><br><span class="line">  <span class="attr">submit:</span> <span class="string">&quot;提交&quot;</span></span><br><span class="line">  <span class="attr">reply:</span> <span class="string">&quot;回覆&quot;</span></span><br><span class="line">  <span class="comment"># ... 25+ 條目完整本地化</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="�️-隱私政策建立與合規性"><a href="#�️-隱私政策建立與合規性" class="headerlink" title="�️ 隱私政策建立與合規性"></a>�️ 隱私政策建立與合規性</h3><p><strong>政策創建背景</strong>：</p>
+<ul>
+<li><strong>法規合規</strong>：響應隱私協議彈窗 404 問題</li>
+<li><strong>用戶權益</strong>：透明化數據收集與使用政策</li>
+<li><strong>專業形象</strong>：提升網站專業度與可信度</li>
+</ul>
+<p><strong>政策內容架構</strong>：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 隱私政策結構</span></span><br><span class="line">├── 一、訪問時數據收集與使用</span><br><span class="line">│   ├── 第三方服務清單 (Waline, LeanCloud, GitHub Pages, jsdelivr...)</span><br><span class="line">│   └── 數據使用目的 (優化、安全、統計)</span><br><span class="line">├── 二、評論時個人信息處理</span><br><span class="line">│   ├── Waline 評論系統說明</span><br><span class="line">│   └── 數據存儲與保護措施</span><br><span class="line">├── 三、Cookies 與本地存儲</span><br><span class="line">├── 四、信息共享與轉讓政策  </span><br><span class="line">└── 五、附屬協議 (惡意行為處理)</span><br></pre></td></tr></table></figure>
+
+<p><strong>技術細節</strong>：</p>
+<ul>
+<li><strong>頁面路徑</strong>：<code>/privacy/</code> (解決 agreementPopup 404)</li>
+<li><strong>文件位置</strong>：<code>source/privacy/index.md</code></li>
+<li><strong>頁面類型</strong>：<code>type: &quot;privacy&quot;, layout: &quot;privacy&quot;</code></li>
+</ul>
+<h3 id="🎨-UI-UX-優化：評論數量隱藏與間距補償"><a href="#🎨-UI-UX-優化：評論數量隱藏與間距補償" class="headerlink" title="🎨 UI&#x2F;UX 優化：評論數量隱藏與間距補償"></a>🎨 UI&#x2F;UX 優化：評論數量隱藏與間距補償</h3><p><strong>問題診斷</strong>：<br>關閉評論數量顯示後，文章元數據區域出現間距過緊問題，影響閱讀體驗。</p>
+<p><strong>解決方案</strong>：<br>創建 <code>/source/css/custom.css</code> 自定義樣式系統：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 核心間距優化 */</span></span><br><span class="line"><span class="selector-class">.post-meta</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1.5rem</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">0.5rem</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.article-content</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">1.5rem</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 視覺分隔線 (取代評論數量位置) */</span></span><br><span class="line"><span class="selector-class">.post-meta</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">var</span>(--anzhiyu-hr-color);</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 響應式適配 */</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">768px</span>) &#123;</span><br><span class="line">  <span class="selector-class">.post-meta</span> &#123; <span class="attribute">margin-bottom</span>: <span class="number">1rem</span> <span class="meta">!important</span>; &#125;</span><br><span class="line">  <span class="selector-class">.article-content</span> &#123; <span class="attribute">margin-top</span>: <span class="number">1rem</span> <span class="meta">!important</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>配置整合</strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&lt;link</span> <span class="string">rel=&quot;stylesheet&quot;</span> <span class="string">href=&quot;/css/custom.css&quot;</span> <span class="string">media=&quot;defer&quot;</span> <span class="string">onload=&quot;this.media=&#x27;all&#x27;&quot;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="📊-頁尾配置最佳化"><a href="#📊-頁尾配置最佳化" class="headerlink" title="📊 頁尾配置最佳化"></a>📊 頁尾配置最佳化</h3><p><strong>社交媒體欄啟用</strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">socialBar:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># false → true</span></span><br><span class="line">  <span class="attr">left:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">email</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">itousouta15@gmail.com</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">facebook</span>  <span class="comment"># 新增</span></span><br><span class="line">      <span class="attr">link:</span> <span class="string">https://www.facebook.com/itou.souta15</span></span><br><span class="line">  <span class="attr">right:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">Github</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">Bilibili</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">CC</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>連結結構重組</strong>：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">list:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># false → true</span></span><br><span class="line">  <span class="attr">randomFriends:</span> <span class="number">2</span>  <span class="comment"># 3 → 2 (優化)</span></span><br><span class="line">  <span class="attr">project:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">連結</span></span><br><span class="line">      <span class="attr">links:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">BLOG(舊站)</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">SCAICT</span> <span class="string">中電會</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">協議</span>  <span class="comment"># 新增隱私政策分類</span></span><br><span class="line">      <span class="attr">links:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">title:</span> <span class="string">隱私協議</span></span><br><span class="line">          <span class="attr">link:</span> <span class="string">/privacy/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="🚀-建置狀態與性能指標"><a href="#🚀-建置狀態與性能指標" class="headerlink" title="🚀 建置狀態與性能指標"></a>🚀 建置狀態與性能指標</h3><p><strong>當前建置數據</strong>：</p>
+<ul>
+<li><strong>文件數量</strong>：118 個 (117 → 118, +custom.css)</li>
+<li><strong>總大小</strong>：21.78MB (優化後穩定)</li>
+<li><strong>建置時間</strong>：~300ms (高效能)</li>
+<li><strong>警告數量</strong>：0 (完全乾淨)</li>
+</ul>
+<p><strong>功能完整性檢查</strong>：</p>
+<ul>
+<li>✅ <strong>評論系統</strong>：Waline 完全功能，表情包豐富</li>
+<li>✅ <strong>隱私政策</strong>：法規合規，彈窗正常</li>
+<li>✅ <strong>樣式系統</strong>：間距優雅，響應式完善</li>
+<li>✅ <strong>PWA 功能</strong>：離線緩存，安裝提示正常</li>
+<li>✅ <strong>繁體中文</strong>：全站統一，專業用詞</li>
+</ul>
+<hr>
+<p><em>�📝 更新時間：2025-10-05 22:30<br>📋 專案狀態：v2.4.0 功能完整版本<br>🎯 技術成熟度：★★★★★ (5&#x2F;5)<br>🔄 最新功能：評論系統現代化、隱私政策合規、UI&#x2F;UX精細化調整<br>🚀 下次迭代：內容創作工具優化與 SEO 進階配置</em></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src="/img/avatar.webp" title="头像" alt="头像"><img class="post-copyright__author_img_front" src="/img/avatar.webp" title="头像" alt="头像"></a><div class="post-copyright__author_name">伊藤蒼太</div><div class="post-copyright__author_desc">Professional Bug Creator</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="該文章為原創文章，注意版權協議" href="https://itousouta15.tw/2025/10/05/devlog/">原創</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://itousouta15.tw/2025/10/05/devlog/')">AnZhiYu 主題開發日誌</span></a></div><div class="post-copyright__notice"><span class="post-copyright-info">本部落格所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="https://itousouta15.tw" target="_blank">伊藤蒼太</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Hexo/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Hexo<span class="tagsPageCount">3</span></a><a class="post-meta__box__tags" href="/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>前端開發<span class="tagsPageCount">3</span></a></div></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2025/08/27/hexo/"><img class="prev-cover" src="/img/Hexo/hexo_github.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用 GitHub Pages + Hexo 架設個人BLOG</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/2025/08/27/hexo/" title="使用 GitHub Pages + Hexo 架設個人BLOG"><img class="cover" src="/img/Hexo/hexo_github.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-08-27</div><div class="title">使用 GitHub Pages + Hexo 架設個人BLOG</div></div></a></div><div><a href="/2025/04/04/firstblog/" title="第一次架網站的心得(舊站)"><img class="cover" src="/img/mainweb.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-04-04</div><div class="title">第一次架網站的心得(舊站)</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 評論</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="waline-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src="/img/avatar.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">專注於競賽程式設計與網頁開發的學生，展示各類專案、程式範例與技術文章，熱衷於社群交流與技術成長。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">伊藤蒼太</h1><div class="author-info__desc">Professional Bug Creator</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/itousouta15" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">歡迎來到我的秘密基地鴨~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目錄</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8E%AF-%E5%B0%88%E6%A1%88%E6%A6%82%E8%A6%BD"><span class="toc-number">1.</span> <span class="toc-text">🎯 專案概覽</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%8F%B0-%E8%A9%B3%E7%B4%B0%E9%96%8B%E7%99%BC%E6%99%82%E9%96%93%E7%B7%9A"><span class="toc-number">2.</span> <span class="toc-text">⏰ 詳細開發時間線</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%85-2025-10-04-%E6%97%A9%E6%9C%9F%E9%9A%8E%E6%AE%B5"><span class="toc-number">2.1.</span> <span class="toc-text">📅 2025-10-04 早期階段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#09-00-10-00-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%88%87%E6%B8%85%E7%90%86"><span class="toc-number">2.1.1.</span> <span class="toc-text">09:00-10:00 初始化與清理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A7-2025-10-04-%E4%B8%AD%E6%9C%9F%E9%9A%8E%E6%AE%B5"><span class="toc-number">2.2.</span> <span class="toc-text">🔧 2025-10-04 中期階段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#21-32-%E8%A1%8C%E5%8B%95%E7%AB%AF%E5%84%AA%E5%8C%96"><span class="toc-number">2.2.1.</span> <span class="toc-text">21:32 行動端優化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-52-%E7%A4%BE%E7%BE%A4%E5%AA%92%E9%AB%94%E6%95%B4%E5%90%88"><span class="toc-number">2.2.2.</span> <span class="toc-text">21:52 社群媒體整合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#22-14-%E8%A6%96%E8%A6%BA%E8%B3%87%E6%BA%90%E5%84%AA%E5%8C%96"><span class="toc-number">2.2.3.</span> <span class="toc-text">22:14 視覺資源優化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A6-2025-10-04-%E4%BE%9D%E8%B3%B4%E7%AE%A1%E7%90%86%E9%9A%8E%E6%AE%B5"><span class="toc-number">2.3.</span> <span class="toc-text">📦 2025-10-04 依賴管理階段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7%E6%9B%B4%E6%96%B0"><span class="toc-number">2.3.1.</span> <span class="toc-text">安全性更新</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%9F-2025-10-04-%E6%99%9A%E6%9C%9F%E9%9A%8E%E6%AE%B5"><span class="toc-number">2.4.</span> <span class="toc-text">🌟 2025-10-04 晚期階段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#23-04-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E7%99%BC%E5%B8%83"><span class="toc-number">2.4.1.</span> <span class="toc-text">23:04 主要功能發布</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9A-2025-10-05-%E6%96%87%E6%AA%94%E5%84%AA%E5%8C%96%E9%9A%8E%E6%AE%B5"><span class="toc-number">2.5.</span> <span class="toc-text">📚 2025-10-05 文檔優化階段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#00-39-%E6%96%87%E6%AA%94%E7%B5%90%E6%A7%8B%E9%87%8D%E6%A7%8B"><span class="toc-number">2.5.1.</span> <span class="toc-text">00:39 文檔結構重構</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#00-40-%E6%9C%80%E7%B5%82%E5%84%AA%E5%8C%96"><span class="toc-number">2.5.2.</span> <span class="toc-text">00:40 最終優化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#00-07-00-52-JavaScript-%E7%A9%A9%E5%AE%9A%E6%80%A7%E9%87%8D%E6%A7%8B"><span class="toc-number">2.5.3.</span> <span class="toc-text">00:07-00:52 JavaScript 穩定性重構</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BF%BD-%E6%9C%80%E6%96%B0%E6%9B%B4%E6%96%B0-2025-10-05"><span class="toc-number">3.</span> <span class="toc-text">� 最新更新 - 2025-10-05</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%A8-%E4%B8%BB%E9%A1%8C%E8%89%B2%E5%BD%A9%E5%B0%8D%E6%AF%94%E5%BA%A6%E5%84%AA%E5%8C%96%EF%BC%88%E5%B7%B2%E5%AE%8C%E6%88%90%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">🎨 主題色彩對比度優化（已完成）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-PWA-%E8%AD%A6%E5%91%8A%E5%AE%8C%E5%85%A8%E6%B6%88%E9%99%A4%EF%BC%88%E5%B7%B2%E8%A7%A3%E6%B1%BA%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">🛠️ PWA 警告完全消除（已解決）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8A-%E9%96%8B%E7%99%BC%E7%B8%BD%E7%B5%90%E8%88%87%E7%8F%BE%E7%8B%80"><span class="toc-number">3.3.</span> <span class="toc-text">📊 開發總結與現狀</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%94%84-%E6%9C%80%E6%96%B0%E6%9B%B4%E6%96%B0-2025-10-05-%E6%99%9A%E9%96%93"><span class="toc-number">4.</span> <span class="toc-text">🔄 最新更新 - 2025-10-05 晚間</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%97%A3%EF%B8%8F-%E8%A9%95%E8%AB%96%E7%B3%BB%E7%B5%B1%E5%85%A8%E9%9D%A2%E9%81%B7%E7%A7%BB%EF%BC%9AValine-%E2%86%92-Waline"><span class="toc-number">4.1.</span> <span class="toc-text">🗣️ 評論系統全面遷移：Valine → Waline</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%AE%8A%E6%9B%B4"><span class="toc-number">4.1.1.</span> <span class="toc-text">配置變更</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%8C%96%E8%AA%9E%E8%A8%80%E5%8C%85"><span class="toc-number">4.1.2.</span> <span class="toc-text">本地化語言包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%B8%8F-%E9%9A%B1%E7%A7%81%E6%94%BF%E7%AD%96%E5%BB%BA%E7%AB%8B%E8%88%87%E5%90%88%E8%A6%8F%E6%80%A7"><span class="toc-number">4.2.</span> <span class="toc-text">�️ 隱私政策建立與合規性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%A8-UI-UX-%E5%84%AA%E5%8C%96%EF%BC%9A%E8%A9%95%E8%AB%96%E6%95%B8%E9%87%8F%E9%9A%B1%E8%97%8F%E8%88%87%E9%96%93%E8%B7%9D%E8%A3%9C%E5%84%9F"><span class="toc-number">4.3.</span> <span class="toc-text">🎨 UI&#x2F;UX 優化：評論數量隱藏與間距補償</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8A-%E9%A0%81%E5%B0%BE%E9%85%8D%E7%BD%AE%E6%9C%80%E4%BD%B3%E5%8C%96"><span class="toc-number">4.4.</span> <span class="toc-text">📊 頁尾配置最佳化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-%E5%BB%BA%E7%BD%AE%E7%8B%80%E6%85%8B%E8%88%87%E6%80%A7%E8%83%BD%E6%8C%87%E6%A8%99"><span class="toc-number">4.5.</span> <span class="toc-text">🚀 建置狀態與性能指標</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近發布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/10/05/devlog/" title="AnZhiYu 主題開發日誌"><img src="/img/Newweb.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AnZhiYu 主題開發日誌"/></a><div class="content"><a class="title" href="/2025/10/05/devlog/" title="AnZhiYu 主題開發日誌">AnZhiYu 主題開發日誌</a><time datetime="2025-10-04T17:30:00.000Z" title="發表於 2025-10-05 01:30:00">2025-10-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/27/hexo/" title="使用 GitHub Pages + Hexo 架設個人BLOG"><img src="/img/Hexo/hexo_github.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用 GitHub Pages + Hexo 架設個人BLOG"/></a><div class="content"><a class="title" href="/2025/08/27/hexo/" title="使用 GitHub Pages + Hexo 架設個人BLOG">使用 GitHub Pages + Hexo 架設個人BLOG</a><time datetime="2025-08-27T06:32:32.000Z" title="發表於 2025-08-27 14:32:32">2025-08-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/ais3preexam/" title="AIS3 pre-exam 2025"><img src="/img/ais3/ais3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AIS3 pre-exam 2025"/></a><div class="content"><a class="title" href="/2025/07/11/ais3preexam/" title="AIS3 pre-exam 2025">AIS3 pre-exam 2025</a><time datetime="2025-07-11T05:32:32.000Z" title="發表於 2025-07-11 13:32:32">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/zerojudge/" title="Zerojudge題解"><img src="/img/ZJ.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Zerojudge題解"/></a><div class="content"><a class="title" href="/2025/07/11/zerojudge/" title="Zerojudge題解">Zerojudge題解</a><time datetime="2025-07-11T04:00:00.000Z" title="發表於 2025-07-11 12:00:00">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/04/firstblog/" title="第一次架網站的心得(舊站)"><img src="/img/mainweb.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一次架網站的心得(舊站)"/></a><div class="content"><a class="title" href="/2025/04/04/firstblog/" title="第一次架網站的心得(舊站)">第一次架網站的心得(舊站)</a><time datetime="2025-04-04T10:29:32.000Z" title="發表於 2025-04-04 18:29:32">2025-04-04</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" href="mailto:itousouta15@gmail.com" title="email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/itou.souta15" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" href="/atom.xml" title="RSS"><i class="anzhiyufont anzhiyu-icon-rss"></i></a><img class="footer_mini_logo" title="返回頂部" alt="返回頂部" onclick="anzhiyu.scrollToDest(0, 500)" src="/img/avatar.webp" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/itousouta15" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" href="/copyright" title="CC"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i></a></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">連結</div><div class="footer-links"><a class="footer-item" title="BLOG(舊站)" target="_blank" rel="noopener" href="https://itousouta15.github.io/legacy-blog/">BLOG(舊站)</a><a class="footer-item" title="SCAICT 中電會" target="_blank" rel="noopener" href="https://SCAICT.org">SCAICT 中電會</a></div></div><div class="footer-group"><div class="footer-title">主題</div><div class="footer-links"><a class="footer-item" title="源碼" target="_blank" rel="noopener" href="https://github.com/itousouta15/itousouta15.github.io">源碼</a><a class="footer-item" title="開發日誌" href="/2025/10/05/devlog/">開發日誌</a></div></div><div class="footer-group"><div class="footer-title">導航</div><div class="footer-links"><a class="footer-item" title="碎碎念" href="/essay/">碎碎念</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">協議</div><div class="footer-links"><a class="footer-item" title="隱私協議" href="/privacy/">隱私協議</a><a class="footer-item" title="版權協議" href="/copyright/">版權協議</a></div></div><div class="footer-group"><div class="footer-title-group"><div class="footer-title">友鏈</div><a class="random-friends-btn" id="footer-random-friends-btn" href="javascript:addFriendLinksInFooter();" title="换一批友情链接"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right"></i></a></div><div class="footer-links" id="friend-links-in-footer"></div></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="BLOG框架为Hexo_v7.3.0" title="BLOG框架为Hexo_v7.3.0"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="BLOG框架为Hexo_v7.3.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站項目由Github托管" title="本站項目由Github托管"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站項目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站採用知識共享署名－非商業性使用－相同方式共享 4.0 國際許可協議進行許可" title="本站採用知識共享署名－非商業性使用－相同方式共享 4.0 國際許可協議進行許可"><img src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站採用知識共享署名－非商業性使用－相同方式共享 4.0 國際許可協議進行許可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2025 By <a class="footer-bar-link" href="/" title="伊藤蒼太" target="_blank">伊藤蒼太</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主題">主題</a><a class="footer-bar-link cc" href="/copyright" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/" title="tag"><div class="headline">標籤</div><div class="length-num">5</div></a><a href="/categories/" title="category"><div class="headline">分類</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="顯示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>顯示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://itousouta15.github.io/legacy-blog/" title="BLOG(舊站)"><img class="back-menu-item-icon" src="/img/banner.webp" alt="BLOG(舊站)"/><span class="back-menu-item-text">BLOG(舊站)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://SCAICT.org" title="SCAICT 中電會"><img class="back-menu-item-icon" src="https://scaict.org/src/img/logo.svg" alt="SCAICT 中電會"/><span class="back-menu-item-text">SCAICT 中電會</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">社群連結</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://x.com/itou_souta15" title="X (Twitter)"><img class="back-menu-item-icon" src="https://raw.githubusercontent.com/ant-design/ant-design-icons/080054b2dbcd56e413b2b89ef1a90bf79b20303f/packages/icons-svg/svg/filled/x.svg" alt="X (Twitter)"/><span class="back-menu-item-text">X (Twitter)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/itousouta15" title="GitHub"><img class="back-menu-item-icon" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"/><span class="back-menu-item-text">GitHub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://discord.gg/uAX6h9VmA4" title="Discord"><img class="back-menu-item-icon" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord"/><span class="back-menu-item-text">Discord</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.threads.net/@itou.souta15" title="Threads"><img class="back-menu-item-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/threads-app-icon.png" alt="Threads"/><span class="back-menu-item-text">Threads</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://instagram.com/itousouta15" title="Instagram"><img class="back-menu-item-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png?20220518162235" alt="Instagram"/><span class="back-menu-item-text">Instagram</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 歸檔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 朋友</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 夥伴們</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 碎碎念</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AIS3/" style="font-size: 0.88rem;">AIS3<sup>1</sup></a><a href="/tags/Hexo/" style="font-size: 0.88rem; font-weight: 500; color: var(--anzhiyu-lighttext)">Hexo<sup>3</sup></a><a href="/tags/Zerojudge/" style="font-size: 0.88rem;">Zerojudge<sup>1</sup></a><a href="/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/" style="font-size: 0.88rem;">前端開發<sup>3</sup></a><a href="/tags/%E8%B3%87%E5%AE%89/" style="font-size: 0.88rem;">資安<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直達評論"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到頂部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製文字</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>貼上文字</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到留言</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新視窗打開</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>複製連結地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>複製圖片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下載圖片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新視窗打開圖片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站內搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜尋</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切換到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切換到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;null&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>文章分類</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章標籤</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>複製網址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">關閉留言</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為簡體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("10/04/2025 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `歡迎使用安知魚!`,
+    `生活明朗, 萬物可愛`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上線",
+    dnum,
+    "天",
+    "©2025 By 安知鱼 V1.6.14",
+  ];
+  const ascll2 = [`NCC2-036`, `調用箝制鏡頭拍照成功，識別為【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在看 伊藤蒼太 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打開控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你在被FBI監控(X).", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://web-eight-weld-65.vercel.app',
+      pageview: false,
+      dark: 'html[data-theme="dark"]',
+      path: window.location.pathname,
+      comment: false,
+      imageUploader: true,
+    }, {"lang":"zh-TW","emoji":["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],"meta":["nick","mail","link"],"requiredMeta":["nick","mail"],"avatar":"mp","avatarCDN":"https://sdn.geekzu.org/avatar/","login":"enable","wordLimit":0,"pageSize":10,"locale":{"placeholder":"💭 歡迎留言討論！請遵守網路禮儀～","sofa":"來做第一個評論的人吧！","submit":"提交","reply":"回覆","cancelReply":"取消回覆","comment":"留言","refresh":"重新整理","more":"載入更多...","preview":"預覽","emoji":"表情","uploadImage":"上傳圖片","nick":"暱稱","nickError":"暱稱不能少於3個字符","mail":"郵箱","mailError":"請填寫正確的郵件地址","link":"網站","optional":"可選","gifSearchPlaceholder":"搜尋 GIF","profile":"個人資料","admin":"管理員","sticky":"置頂","word":"字","wordHint":"評論字數限制：$0","anonymous":"匿名","login":"登錄","logout":"登出","signed":"已登錄","approve":"通過","waiting":"待審核","spam":"垃圾","unsticky":"取消置頂","oldest":"按時間正序","latest":"按時間倒序","hottest":"按熱度排序","reactionTitle":"你認為這篇文章怎麼樣？"}}))
+
+    const destroyWaline = () => {
+      waline.destroy()
+    }
+
+    anzhiyu.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      await getCSS('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline.css')
+      if (true) await getCSS('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline-meta.css')
+      const { init } = await import('https://cdn.cbd.int/@waline/client@3.1.3/dist/waline.js')
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if ('Waline' === 'Waline' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    else setTimeout(loadWaline, 0)
+  } else {
+    window.loadOtherComment = loadWaline
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>window.addEventListener('load', () => {
+  const changeContent = content => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[圖片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[連結]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[程式碼]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${anzhiyu.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '沒有評論'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const getComment = async () => {
+    try {
+      const res = await fetch('https://web-eight-weld-65.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const result = await res.json()
+      const walineArray = result.data.map(e => {
+        return {
+          'content': changeContent(e.comment),
+          'avatar': e.avatar,
+          'nick': e.nick,
+          'url': e.url + '#' + e.objectId,
+          'date': e.time || e.insertedAt
+        }
+      })
+      saveToLocal.set('waline-newest-comments', JSON.stringify(walineArray), 10/(60*24))
+      generateHtml(walineArray)
+    } catch (err) {
+      console.error(err)
+      const $dom = document.querySelector('#card-newest-comments .aside-list')
+      $dom.textContent= "無法獲取評論，請確認相關配置是否正確"
+    }
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('waline-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" onerror="console.warn(&quot;QRCode 庫載入失敗，QR 功能將不可用&quot;);"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

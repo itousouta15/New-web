@@ -457,6 +457,11 @@ const anzhiyu = {
   // 初始化即刻
   initIndexEssay: function () {
     if (!document.getElementById("bbTimeList")) return;
+    // 檢查 Swiper 是否可用
+    if (typeof Swiper === 'undefined') {
+      console.warn('Swiper 庫未載入，跳過 Essay 輪播初始化');
+      return;
+    }
     setTimeout(() => {
       let essay_bar_swiper = new Swiper(".essay_bar_swiper_container", {
         passiveListeners: true,
@@ -605,13 +610,13 @@ const anzhiyu = {
       let message = "";
 
       if (hour >= 0 && hour <= 5) {
-        message = "睡个好觉，保证精力充沛";
+        message = "睡个好覺，保證精力充沛";
       } else if (hour > 5 && hour <= 10) {
-        message = "一日之计在于晨";
+        message = "一日之計在於晨";
       } else if (hour > 10 && hour <= 14) {
-        message = "吃饱了才有力气干活";
+        message = "吃飽了才有力氣幹活";
       } else if (hour > 14 && hour <= 18) {
-        message = "集中精力，攻克难关";
+        message = "集中精力，攻克難關";
       } else if (hour > 18 && hour <= 24) {
         message = "不要太勞累了，早睡更健康";
       }
@@ -1152,15 +1157,27 @@ const anzhiyu = {
   // 创建二维码
   qrcodeCreate: function () {
     if (document.getElementById("qrcode")) {
-      document.getElementById("qrcode").innerHTML = "";
-      var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: window.location.href,
-        width: 250,
-        height: 250,
-        colorDark: "#000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H,
-      });
+      try {
+        // 檢查 QRCode 是否可用
+        if (typeof QRCode === 'undefined') {
+          console.warn('QRCode 庫未載入，無法生成二維碼');
+          document.getElementById("qrcode").innerHTML = '<div style="text-align:center;padding:20px;color:#666;">QR 碼功能暫時無法使用</div>';
+          return;
+        }
+        
+        document.getElementById("qrcode").innerHTML = "";
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: window.location.href,
+          width: 250,
+          height: 250,
+          colorDark: "#000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H,
+        });
+      } catch (error) {
+        console.warn('QR 碼生成失敗:', error);
+        document.getElementById("qrcode").innerHTML = '<div style="text-align:center;padding:20px;color:#666;">QR 碼生成失敗</div>';
+      }
     }
   },
 
