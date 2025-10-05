@@ -54,7 +54,7 @@ mourn:
 # Code Blocks (代码相关)
 # --------------------------------------
 
-highlight_theme: light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: darker #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -83,14 +83,13 @@ author_status:
   # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
   statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
-    - 💻 熱愛程式設計的開發者
-    - � 持續學習新技術
-    - � 專業 Bug 製造者
-    - 🌱 技術分享愛好者
-    - 🎮 動漫與科技的交集
-    - 🚀 追求程式的藝術
-    - � 解決問題的思考者
-    - ☕ 咖啡驅動的程式碼
+    - 熱愛程式設計的開發者
+    - 持續學習新技術
+    - 專業 Bug 製造者
+    - 技術分享愛好者
+    - 動漫與科技的交集
+    - 追求程式的藝術
+    - 咖啡驅動的程式碼
 
 # search (搜索)
 # see https://blog.anheyu.com/posts/c27d.html#搜索系统
@@ -167,7 +166,7 @@ cover:
   archives_enable: true
   # the position of cover in home page (封面显示的位置)
   # left/right/both
-  position: left
+  position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
     # - /img/default_cover.jpg
@@ -185,11 +184,11 @@ error_404:
 
 post_meta:
   page: # Home Page
-    date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
-    date_format: simple # date/relative/simple 显示日期还是相对日期 或者 简单日期
+    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_format: date # date/relative/simple 显示日期还是相对日期 或者 简单日期
     categories: true # true or false 主页是否显示分类
     tags: true # true or false 主页是否显示标籤
-    label: false # true or false 显示描述性文字
+    label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 文章页日期是创建日或者更新日或都显示
     date_format: date # date/relative 显示日期还是相对日期
@@ -233,7 +232,7 @@ anchor: false
 # toc (目录)
 toc:
   post: true
-  page: false
+  page: true
   number: true
   expand: false
   style_simple: false # for post
@@ -245,7 +244,7 @@ post_copyright:
   location: 台灣
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
-  avatarSinks: false # hover时头像下沉
+  avatarSinks: true # hover时头像下沉
   copyright_author_img_back:
   copyright_author_img_front:
   copyright_author_link: /
@@ -322,56 +321,86 @@ addtoany:
 comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Valine/Waline/Twikoo/Artalk
-  use: # Twikoo/Waline
+  use: Valine # Twikoo/Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: false
-  count: false # Display comment count in post's top_img
-  card_post_count: false # Display comment count in Home Page
+  count: true # Display comment count in post's top_img
+  card_post_count: true # Display comment count in Home Page
 
 # valine
 # https://valine.js.org
 valine:
-  appId: xxxxx # leancloud application app id
-  appKey: xxxxx # leancloud application app key
-  pageSize: 10 # comment list page size
-  avatar: mp # gravatar style https://valine.js.org/#/avatar
-  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 填写QQ邮箱就会使用QQ头像喔~. # valine comment input placeholder (like: Please leave your footprints)
-  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
-  recordIP: false # Record reviewer IP
-  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: /img/comment_bg.png # valine background
-  emojiCDN: //i0.hdslb.com/bfs/emote/ # emoji CDN
-  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: nick,mail # required fields (nick/mail)
-  visitor: false
-  master:
-    - xxxxx
-  friends:
-    - xxxxxx
-  tagMeta: "博主,小伙伴,访客"
+  appId: "enNryGwveuZzVlq3wK9RKdI5-MdYXbMMI" # 請填入你的 LeanCloud App ID
+  appKey: "28ErkaERrMOsA6JwTqhYCnZZ" # 請填入你的 LeanCloud App Key  
+  pageSize: 10 # 評論列表分頁大小
+  avatar: mp # Gravatar 頭像樣式: mp/identicon/monsterid/wavatar/retro/robohash/hide
+  lang: zh-TW # 語言設置
+  placeholder: 💭 歡迎留言討論！請遵守網路禮儀～ # 評論框占位符
+  guest_info: nick,mail,link # 評論者信息字段 (nick/mail/link)
+  recordIP: false # 是否記錄評論者 IP
+  serverURLs: # 自定義域名（海外版會自動檢測，國內用戶可能需要配置）
+  bg: /img/comment_bg.png # 背景圖片
+  emojiCDN: # 表情 CDN，可使用 https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/
+  enableQQ: false # 啟用 QQ 頭像和暱稱獲取（台灣用戶建議關閉）
+  requiredFields: nick,mail # 必填字段
+  visitor: true # 是否顯示文章訪問量
+  master: # 管理員郵箱 MD5 值
+    # - d41d8cd98f00b204e9800998ecf8427e # 範例 MD5
+  friends: # 小夥伴郵箱 MD5 值  
+    # - d41d8cd98f00b204e9800998ecf8427e # 範例 MD5
+  tagMeta: "博主,好友,訪客" # 用戶標籤
   option:
+    lang: zh-TW
+    locale:
+      nick: "暱稱"
+      mail: "郵箱"
+      link: "網站"
+      nickFail: "暱稱不能少於3個字符"
+      mailFail: "請填寫正確的郵件地址"
+      sofa: "來做第一個評論的人吧！"
+      submit: "提交"
+      reply: "回覆"
+      cancelReply: "取消回覆"
+      comments: "留言"
+      cancel: "取消"
+      confirm: "確認"
+      continue: "繼續"
+      more: "載入更多..."
+      preview: "預覽"
+      emoji: "表情"
+      uploadImage: "上傳圖片"
+      seconds: "秒前"
+      minutes: "分鐘前"
+      hours: "小時前"
+      days: "天前"
+      now: "剛剛"
 
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: # Waline server address url
-  bg: # Waline background
-  pageview: false
-  meta_css: false # 是否引入 waline-meta.css ,以便显示 meta图标
-  imageUploader: true # 配置为 > 换行后可自定义图片上传逻辑，示例: https://waline.js.org/cookbook/customize/upload-image.html#案例
-  # 以下为可选配置，后续若有新增/修改配置参数可在此自行添加/修改
+  serverURL: # 你的 Waline 伺服器地址，可以使用 Vercel 部署
+  bg: /img/comment_bg.png # Waline 背景圖片
+  pageview: true # 是否顯示文章閱讀數
+  meta_css: true # 是否引入 waline-meta.css，以便顯示 meta 圖標
+  imageUploader: true # 是否啟用圖片上傳
+  placeholder: "歡迎留言討論～請遵守網路禮儀 💖"
+  # 以下為可選配置
   option:
+    lang: zh-TW
+    locale:
+      placeholder: "歡迎留言討論～"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId:
-  region:
-  visitor: false
+  envId: # 你的環境 ID，需要在騰訊雲開發中獲取
+  region: ap-shanghai # 環境地域，默認為 ap-shanghai
+  visitor: true # 是否顯示文章閱讀數
   option:
+    # 更多選項可以在這裡配置
+    # 詳細配置請參考：https://twikoo.js.org/
 
 # Artalk
 # https://artalk.js.org/guide/frontend/config.html
@@ -451,7 +480,7 @@ footer:
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
-        message: 博客框架为Hexo_v5.4.0 #徽标提示语
+        message: BLOG框架为Hexo_v7.3.0 #徽标提示语
       - link: https://blog.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
@@ -460,10 +489,10 @@ footer:
       #   message: 本站使用多吉云为静态资源提供CDN加速
       - link: https://github.com/
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
-        message: 本站项目由Github托管
+        message: 本站項目由Github托管
       - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
-        message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+        message: 本站採用知識共享署名－非商業性使用－相同方式共享 4.0 國際許可協議進行許可
   socialBar:
     enable: false
     centerImg:
@@ -822,7 +851,7 @@ aside:
 
   card_announcement:
     enable: true
-    content: 歡迎來到我的秘密基地！這裡記錄著我的學習心得與程式開發紀錄 🎉
+    content: 歡迎來到我的秘密基地鴨~
   card_weixin: 
     enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -901,9 +930,9 @@ translate:
   # The text of the button when the language is Traditional Chinese
   msgToSimplifiedChinese: "简"
   # Right-click the menu to traditional Chinese
-  rightMenuMsgToTraditionalChinese: "转为繁体"
+  rightMenuMsgToTraditionalChinese: "轉為繁體"
   # Right-click menu to simplified Chinese
-  rightMenuMsgToSimplifiedChinese: "转为简体"
+  rightMenuMsgToSimplifiedChinese: "轉為簡體"
 
 # Read Mode (閲读模式)
 readmode: true
@@ -1025,7 +1054,7 @@ instantpage: true
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之间添加空格)
 pangu:
-  enable: false
+  enable: true
   field: site # site/post
 
 # Lazyload (图片懒加载)
@@ -1041,7 +1070,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: false
+  enable: true
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)

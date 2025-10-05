@@ -168,3 +168,9 @@ bangumi: # 追番设置
 aplayer:
   meting: true
   asset_inject: false
+
+swpp:
+  # 是否启用插件
+  enable: false
+  # 是否在发布前自动执行脚本
+  # auto_exec: true
