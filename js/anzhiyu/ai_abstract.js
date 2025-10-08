@@ -348,7 +348,7 @@
   }
 
   function aiGoHome() {
-    startAI("正在前往博客主页...", false);
+    startAI("正在前往網站...", false);
     timeouts[2] = setTimeout(() => {
       if (window.pjax) {
         pjax.loadUrl("/");

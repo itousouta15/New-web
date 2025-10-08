@@ -18,9 +18,9 @@
 
 ---
 
-## 📝 關於這個博客
+## 📝 關於這個網站
 
-這是我的個人技術博客，記錄我在程式開發路上的學習心得、專案分享以及生活感悟。網站使用 Hexo 靜態網站生成器搭建，採用 AnZhiYu 主題，部署在 GitHub Pages 上。
+這是我的個人網站，記錄我在程式開發路上的學習心得、專案分享以及生活感悟。網站使用 Hexo 靜態網站生成器搭建，採用 AnZhiYu 主題，部署在 GitHub Pages 上。
 
 ### ✨ 特色功能
 
@@ -152,7 +152,7 @@ hexo server
 
 ## 📜 版權聲明
 
-- 博客內容採用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 協議
+- 網站內容採用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 協議
 - 網站框架基於 [Hexo](https://hexo.io/) 開發
 - 主題使用 [AnZhiYu](https://github.com/anzhiyu-c/hexo-theme-anzhiyu) 並進行客製化
 - 代碼使用 MIT 協議開源
