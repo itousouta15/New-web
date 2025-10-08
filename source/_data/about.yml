@@ -3,7 +3,7 @@
   avatarImg: /img/avatar.webp
   avatarSkills:
     left:
-      - SCAICT 中電會
+      - SCAICT 會長
       - 小小高中生
       - 甚麼都不會
       - 資安只會Web
@@ -12,8 +12,8 @@
       - 斜槓大師
       - 動漫宅宅
       - 程式菜鳥
-  name: 伊藤蒼太
-  description: 是一名 前端工程師、學生、獨立開發者
+  name: 郭家睿
+  description: 是一名 工程師、學生、獨立開發者
   aboutsiteTips:
     tips: 追求
     title1: 源於
