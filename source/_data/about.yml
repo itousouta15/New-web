@@ -1,5 +1,5 @@
 - class_name: 關於我
-  subtitle: 喵喵喵喵
+  subtitle: 特選要溺水了咕嚕咕嚕
   avatarImg: /img/avatar.webp
   avatarSkills:
     left:
@@ -56,7 +56,7 @@
     personality_type: INFP
     photo_url: /img/banner.webp
     personality_img: https://www.16personalities.com/static/images/personality-types/avatars/infp-mediator-female.svg?v=3
-    name_url: https://www.16personalities.com/ch/infp-%E4%BA%BA%E6%A0%BC
+    name_url: https://www.16personalities.com/tw/infp-%E6%80%A7%E6%A0%BC
   maxim:
     maxim_tips: 座右銘
     maxim_top: 喵喵喵喵，
