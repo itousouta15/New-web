@@ -28,7 +28,7 @@
 
 ### Git 安裝
 
-在博客根目录里安装最新版【推荐】
+在部落格根目录里安装最新版【推荐】
 
 ```powershell
 git clone -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu
@@ -51,7 +51,7 @@ theme: anzhiyu
 通过 Npm 安装主题的用户可忽略，其他用户建议学习使用。
 
 - macos/linux
-  在博客根目录运行
+  在部落格根目录运行
 
 ```bash
 cp -rf ./themes/anzhiyu/_config.yml ./_config.anzhiyu.yml

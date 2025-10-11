@@ -142,7 +142,7 @@ hexo.extend.filter.register(
             {
               link: "https://hexo.io/",
               shields: "https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg",
-              message: "博客框架为Hexo_v5.4.0",
+              message: "部落格框架为Hexo_v5.4.0",
             },
             {
               link: "https://blog.anheyu.com/",
@@ -208,7 +208,7 @@ hexo.extend.filter.register(
         },
         card_announcement: {
           enable: false,
-          content: "欢迎来看我的博客鸭~",
+          content: "欢迎来看我的部落格鸭~",
         },
         card_weixin: {
           enable: true,
@@ -610,7 +610,7 @@ hexo.extend.filter.register(
         enable: false,
         title: "与数百名博主无限进步",
         addFriendPlaceholder:
-          "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n",
+          "昵称（请勿包含部落格等字样）：\n网站地址（要求部落格地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n",
       },
       pageThumbnailSuffix: null,
       agreementPopup: {

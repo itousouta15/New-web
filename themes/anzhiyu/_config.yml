@@ -28,7 +28,7 @@ nav:
   menu:
     - title: 网页
       item:
-        - name: 博客
+        - name: 部落格
           link: https://blog.anheyu.com/
           icon: /img/favicon.ico
     - title: 项目
@@ -443,7 +443,7 @@ footer:
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
-        message: 博客框架为Hexo_v5.4.0 #徽标提示语
+        message: 部落格框架为Hexo_v5.4.0 #徽标提示语
       - link: https://blog.anheyu.com/
         shields: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg
         message: 本站使用AnZhiYu主题
@@ -813,7 +813,7 @@ aside:
 
   card_announcement:
     enable: false
-    content: 欢迎来看我的博客鸭~
+    content: 欢迎来看我的部落格鸭~
   card_weixin:
     enable: true
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
@@ -1208,7 +1208,7 @@ linkPageTop:
   enable: false
   title: 与数百名博主无限进步
   # 添加博主友链的评论自定义格式
-  addFriendPlaceholder: "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"
+  addFriendPlaceholder: "昵称（请勿包含部落格等字样）：\n网站地址（要求部落格地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"
 
 # 缩略图后缀 archive/tag/category 页面单独开启后缀
 pageThumbnailSuffix: ""
