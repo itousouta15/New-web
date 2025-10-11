@@ -143,7 +143,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.ico
+favicon: /img/avatar.webp
 
 # Avatar (头像)
 avatar:
@@ -1067,10 +1067,13 @@ icons:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
-    # - xxxx
-    # - xxxx
+    # 添加可能影響 URL 處理的頁面
+    - /search/
+    - /404.html
+    - /admin/
+    - /sitemap.xml
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:

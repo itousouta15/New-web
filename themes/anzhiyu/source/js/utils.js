@@ -327,8 +327,11 @@ const anzhiyu = {
   //是否是文章页
   is_Post: function () {
     var url = window.location.href; //获取url
-    if (url.indexOf("/posts/") >= 0) {
-      //判断url地址中是否包含code字符串
+    var pathname = window.location.pathname;
+    // 檢查是否為文章頁面 - 支持 :year/:month/:day/:title/ 格式
+    // 格式: /YYYY/MM/DD/title/
+    var postPattern = /^\/\d{4}\/\d{2}\/\d{2}\/[^\/]+\/?$/;
+    if (postPattern.test(pathname) || url.indexOf("/posts/") >= 0) {
       return true;
     } else {
       return false;
