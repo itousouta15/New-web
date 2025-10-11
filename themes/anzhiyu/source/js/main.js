@@ -1131,7 +1131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mouseleaveHomeCard = function () {
     const topGroup = document.querySelector(".topGroup");
     if (!topGroup) return;
-    //首页大卡片恢复显示
+    //首頁大卡片恢复显示
     topGroup.addEventListener("mouseleave", function () {
       document.getElementById("todayCard").classList.remove("hide");
       document.getElementById("todayCard").style.zIndex = 1;

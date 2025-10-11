@@ -169,7 +169,7 @@ html.hide-aside .layout > div:first-child {
     padding: 20px 15px !important;
   }
 }
-/* 首页文章宽度 */
+/* 首頁文章宽度 */
 @media screen and (max-width: 1200px) {
   .layout > div:first-child {
     width: 100% !important;
