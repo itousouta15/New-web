@@ -1111,7 +1111,7 @@ const anzhiyu = {
   // 跳转开往
   totraveling: function () {
     anzhiyu.snackbarShow(
-      "即将跳转到「开往」项目的成员博客，不保证跳转网站的安全性和可用性",
+      "即將跳轉到「開往」專案的成員部落格，不保證跳轉網站的安全性和可用性",
       element => {
         element.style.opacity = 0;
         travellingsTimer && clearTimeout(travellingsTimer);
