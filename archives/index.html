@@ -60,7 +60,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2025-10-11 14:57:46',
+  postUpdate: '2025-10-11 15:04:28',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -201,7 +201,7 @@
 window.addEventListener('load',()=> { preloader.endLoading() })
 setTimeout(function(){preloader.endLoading();},10000)
 
-if (true) {
+if (false) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 }</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://itousouta15.github.io/legacy-blog/" title="BLOG(舊站)"><img class="back-menu-item-icon" src="/img/banner.webp" alt="BLOG(舊站)"/><span class="back-menu-item-text">BLOG(舊站)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://SCAICT.org" title="SCAICT 中電會"><img class="back-menu-item-icon" src="https://scaict.org/src/img/logo.svg" alt="SCAICT 中電會"/><span class="back-menu-item-text">SCAICT 中電會</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">社群連結</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://x.com/itou_souta15" title="X (Twitter)"><img class="back-menu-item-icon" src="https://raw.githubusercontent.com/ant-design/ant-design-icons/080054b2dbcd56e413b2b89ef1a90bf79b20303f/packages/icons-svg/svg/filled/x.svg" alt="X (Twitter)"/><span class="back-menu-item-text">X (Twitter)</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/itousouta15" title="GitHub"><img class="back-menu-item-icon" src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"/><span class="back-menu-item-text">GitHub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://discord.gg/uAX6h9VmA4" title="Discord"><img class="back-menu-item-icon" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord"/><span class="back-menu-item-text">Discord</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.threads.net/@itou.souta15" title="Threads"><img class="back-menu-item-icon" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/threads-app-icon.png" alt="Threads"/><span class="back-menu-item-text">Threads</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://instagram.com/itousouta15" title="Instagram"><img class="back-menu-item-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/960px-Instagram_logo_2022.svg.png?20220518162235" alt="Instagram"/><span class="back-menu-item-text">Instagram</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">伊藤蒼太</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
@@ -407,66 +407,4 @@ queueMicrotask(() => {
 POWERMODE.shake = false;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
-var pjax = new Pjax({
-  elements: 'a:not([target="_blank"])',
-  selectors: pjaxSelectors,
-  cacheBust: false,
-  analytics: false,
-  scrollRestoration: false
-})
-
-document.addEventListener('pjax:send', function () {
-  // removeEventListener scroll 
-  anzhiyu.removeGlobalFnEvent('pjax')
-  anzhiyu.removeGlobalFnEvent('themeChange')
-
-  document.getElementById('rightside').classList.remove('rightside-show')
-  
-  if (window.aplayers) {
-    for (let i = 0; i < window.aplayers.length; i++) {
-      if (!window.aplayers[i].options.fixed) {
-        window.aplayers[i].destroy()
-      }
-    }
-  }
-
-  typeof typed === 'object' && typed.destroy()
-
-  //reset readmode
-  const $bodyClassList = document.body.classList
-  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
-})
-
-document.addEventListener('pjax:complete', function () {
-  window.refreshFn()
-
-  document.querySelectorAll('script[data-pjax]').forEach(item => {
-    const newScript = document.createElement('script')
-    const content = item.text || item.textContent || item.innerHTML || ""
-    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
-    newScript.appendChild(document.createTextNode(content))
-    item.parentNode.replaceChild(newScript, item)
-  })
-
-  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
-
-  typeof panguInit === 'function' && panguInit()
-
-  // google analytics
-  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
-
-  // baidu analytics
-  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
-
-  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
-
-  // prismjs
-  typeof Prism === 'object' && Prism.highlightAll()
-})
-
-document.addEventListener('pjax:error', e => {
-  if (e.request.status === 404) {
-    pjax.loadUrl('/404')
-  }
-})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
+</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
