@@ -184,7 +184,7 @@ error_404:
 
 post_meta:
   page: # Home Page
-    date_type: both # created or updated or both 主页文章日期是创建日或者更新日或都显示
+    date_type: created # created or updated or both 主页文章日期是创建日或者更新日或都显示
     date_format: relative # date/relative/simple 显示日期还是相对日期 或者 简单日期
     categories: true # true or false 主页是否显示分类
     tags: true # true or false 主页是否显示标籤
@@ -820,7 +820,7 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size: 18px
+  global-font-size: 16px
   code-font-size:
   font-family:
   code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
