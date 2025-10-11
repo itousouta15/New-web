@@ -1,0 +1,9 @@
+# GitHub Pages 重定向規則
+# 自動隱藏 index.html
+
+/about/index.html /about/ 301
+/essay/index.html /essay/ 301
+/link/index.html /link/ 301
+/comments/index.html /comments/ 301
+/privacy/index.html /privacy/ 301
+/copyright/index.html /copyright/ 301
