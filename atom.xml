@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>伊藤蒼太</title>
+  <icon>https://itousouta15.tw/icon.png</icon>
+  <subtitle>Professional Bug Creator</subtitle>
+  <link href="https://itousouta15.tw/atom.xml" rel="self"/>
+  
+  <link href="https://itousouta15.tw/"/>
+  <updated>2025-10-11T17:30:00.000Z</updated>
+  <id>https://itousouta15.tw/</id>
+  
+  <author>
+    <name>伊藤蒼太</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AnZhiYu 主題開發實戰：完整技術重構記錄</title>
+    <link href="https://itousouta15.tw/2025/10/05/devlog/"/>
+    <id>https://itousouta15.tw/2025/10/05/devlog/</id>
+    <published>2025-10-05T01:30:00.000Z</published>
+    <updated>2025-10-11T17:30:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;🚀-專案概述&quot;&gt;&lt;a href=&quot;#🚀-專案概述&quot; class=&quot;headerlink&quot; title=&quot;🚀 專案概述&quot;&gt;&lt;/a&gt;🚀 專案概述&lt;/h2&gt;&lt;p&gt;一個完整的 Hexo</summary>
+        
+      
+    
+    
+    
+    <category term="技術分享" scheme="https://itousouta15.tw/categories/%E6%8A%80%E8%A1%93%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="Hexo" scheme="https://itousouta15.tw/tags/Hexo/"/>
+    
+    <category term="前端開發" scheme="https://itousouta15.tw/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/"/>
+    
+    <category term="PJAX" scheme="https://itousouta15.tw/tags/PJAX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 GitHub Pages + Hexo 架設個人BLOG</title>
+    <link href="https://itousouta15.tw/2025/08/27/hexo/"/>
+    <id>https://itousouta15.tw/2025/08/27/hexo/</id>
+    <published>2025-08-27T14:32:32.000Z</published>
+    <updated>2025-10-18T10:04:47.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在這個資訊爆炸的時代，「部落格」這一個看似已經過時的名詞，其實依然是屬於個人開發者、研究者與創作者的一塊淨土。與社群平台的碎片化資訊不同，部落格更適合進行系統性的知識整理與技術分享，讓內容能夠被搜尋、被保存、被持續閱讀。尤其對程式設計或網路安全領域的學習者來說，一個屬於自己</summary>
+        
+      
+    
+    
+    
+    <category term="程式開發" scheme="https://itousouta15.tw/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+    <category term="Hexo" scheme="https://itousouta15.tw/tags/Hexo/"/>
+    
+    <category term="前端開發" scheme="https://itousouta15.tw/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AIS3 pre-exam 2025</title>
+    <link href="https://itousouta15.tw/2025/07/11/ais3preexam/"/>
+    <id>https://itousouta15.tw/2025/07/11/ais3preexam/</id>
+    <published>2025-07-11T13:32:32.000Z</published>
+    <updated>2025-10-18T10:04:47.483Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;這是我的第一次CTF&lt;br&gt;打得很爛writeup也寫得很爛&lt;br&gt;&lt;del&gt;為了各位的眼睛著想請不要繼續往下看&lt;/del&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技術分享" scheme="https://itousouta15.tw/categories/%E6%8A%80%E8%A1%93%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="AIS3" scheme="https://itousouta15.tw/tags/AIS3/"/>
+    
+    <category term="資安" scheme="https://itousouta15.tw/tags/%E8%B3%87%E5%AE%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zerojudge 程式解題筆記</title>
+    <link href="https://itousouta15.tw/2025/07/11/zerojudge/"/>
+    <id>https://itousouta15.tw/2025/07/11/zerojudge/</id>
+    <published>2025-07-11T12:00:00.000Z</published>
+    <updated>2025-10-11T15:30:00.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;📚-題解總覽&quot;&gt;&lt;a href=&quot;#📚-題解總覽&quot; class=&quot;headerlink&quot; title=&quot;📚 題解總覽&quot;&gt;&lt;/a&gt;📚 題解總覽&lt;/h2&gt;&lt;p&gt;這裡記錄了我在 ZeroJudge 平台上的解題過程與心得，按照題目分類整理。從基礎的入門題到進階的 APCS 競賽題，每道題都包含了解題思路和程式碼實作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目前收錄題目數量&lt;/strong&gt;：40+ 題&lt;br&gt;&lt;strong&gt;涵蓋範圍&lt;/strong&gt;：基礎語法、數學運算、字串處理、資料結構、演算法、APCS 競賽題&lt;br&gt;&lt;strong&gt;程式語言&lt;/strong&gt;：C++&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="程式開發" scheme="https://itousouta15.tw/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+    <category term="Zerojudge" scheme="https://itousouta15.tw/tags/Zerojudge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一次架網站的心得(舊站)</title>
+    <link href="https://itousouta15.tw/2025/04/04/firstblog/"/>
+    <id>https://itousouta15.tw/2025/04/04/firstblog/</id>
+    <published>2025-04-04T18:29:32.000Z</published>
+    <updated>2025-10-18T10:04:47.483Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;h2 id=&quot;此為舊站開發心得&quot;&gt;&lt;a href=&quot;#此為舊站開發心得&quot; class=&quot;headerlink&quot; title=&quot;此為舊站開發心得&quot;&gt;&lt;/a&gt;此為舊站開發心得&lt;/h2&gt;&lt;p&gt;舊站網址: &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="比賽心得" scheme="https://itousouta15.tw/categories/%E6%AF%94%E8%B3%BD%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="Hexo" scheme="https://itousouta15.tw/tags/Hexo/"/>
+    
+    <category term="前端開發" scheme="https://itousouta15.tw/tags/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/"/>
+    
+  </entry>
+  
+</feed>
