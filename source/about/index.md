@@ -8,29 +8,20 @@ comments: false
 type: "about"
 ---
 
-# 關於我
+## 簡介
+🎓 大里高中二年級學生
+💻 目前專注於各大資訊競賽。
+🔐 只會Web的資安新手。
 
-你好！我是 **伊藤蒼太**，一個熱愛程式設計和技術分享的開發者。
+## 人生經歷
+🌐 SCAICT 中電會第五屆會長
+🧸 大里高中資訊校隊隊長兼教學
+🖥️ SCINT 北臺灣學生資訊社群 美宣
+🚩 THJCC 臺灣高中聯合資安競賽 網管
+🤩 2025 AIS3 軟體、網頁及ToI安全-1
 
-## 關於這個部落格
+## Skill
+[![My Skills](https://skillicons.dev/icons?i=cpp,cs,py,html,css,js,ts,nodejs,git,github,vscode,docker,unity,godot,linux)](https://skillicons.dev)
 
-這裡是我記錄學習心得、技術筆記和生活感悟的地方。在這裡你可以找到：
-
-- 💻 程式設計技術文章
-- 📝 學習心得與經驗分享
-- 🎯 專案開發記錄
-- 🌱 個人成長軌跡
-
-## 技能與興趣
-
-- 🚀 **技術棧**：前端開發、Web 開發
-- 📚 **學習中**：持續學習新技術和框架
-- 🎮 **興趣愛好**：技術探索、閱讀、動漫
-
-## 聯繫方式
-
-- 📧 Email: itousouta15@gmail.com
-- 🐙 GitHub: [itousouta15](https://github.com/itousouta15)
-- 📺 Bilibili: [伊藤蒼太](https://space.bilibili.com/3493135988558536?spm_id_from=333.1007.0.0)
-
-歡迎與我交流討論！😊
+## Github Contribution Chart
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=itousouta15&theme=github-compact&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
